@@ -63,70 +63,31 @@ import { Vue, Component } from 'nuxt-property-decorator'
 export default class TheHeader extends Vue {
   navbarItems = [
     {
-      title: 'Trang chủ',
+      title: 'Home',
       link: '/',
       subMenu: []
     },
     {
-      title: 'Khóa học',
+      title: 'Infomation',
       link: '/',
-      subMenu: [
-        {
-          title: 'HTML5/CSS3',
-          link: '/'
-        },
-        {
-          title: 'Javascript',
-          link: '/'
-        },
-        {
-          title: 'Vue',
-          link: '/'
-        },
-        {
-          title: 'React',
-          link: '/'
-        },
-        {
-          title: 'NodeJS',
-          link: '/'
-        },
-        {
-          title: 'NuxtJS',
-          link: '/'
-        }
-      ]
+      subMenu: []
     },
     {
       title: 'Blog',
       link: '/blog',
       subMenu: [
         {
-          title: 'Tất cả bài viết',
+          title: 'All articles',
           link: '/blog'
         },
         {
-          title: 'Bài viết theo chủ đề',
+          title: 'Article by tag',
           link: '/tags'
         }
       ]
     },
     {
-      title: 'eHandy Teams',
-      link: '/',
-      subMenu: [
-        {
-          title: 'sub 1',
-          link: '/'
-        },
-        {
-          title: 'Sub 2',
-          link: '/'
-        }
-      ]
-    },
-    {
-      title: 'Contact Us',
+      title: 'Contact',
       link: '/contact-us',
       subMenu: []
     }

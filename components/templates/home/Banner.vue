@@ -6,7 +6,7 @@
           <figure class="image is-5by3">
             <img
               class="main-image"
-              src="~assets/images/logo.png"
+              src="~assets/images/phungthaihung.jpeg"
               alt="Description"
             >
           </figure>
@@ -37,8 +37,3 @@ export default class Banner extends Vue {
 
 }
 </script>
-<style scoped>
-.main-image {
-  min-width: 300px;
-}
-</style>
