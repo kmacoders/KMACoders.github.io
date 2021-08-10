@@ -1,0 +1,28 @@
+$eHandyPrimaryColor: #0091ea;
+$eHandyPrimaryColor-invert: #fff;
+
+// Set your colors
+$primary: $eHandyPrimaryColor;
+$primary-invert: $eHandyPrimaryColor-invert;
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// 4. Setup your Custom Colors
+$linkedin: #0077b5;
+$linkedin-invert: findcolorinvert($linkedin);
+$twitter: #55acee;
+$twitter-invert: findcolorinvert($twitter);
+$github: #333;
+$github-invert: findcolorinvert($github);
+
+// 5. Add new color variables to the color map.
+$addColors: (
+  "twitter":($twitter, $twitter-invert),
+  "linkedin": ($linkedin, $linkedin-invert),
+  "github": ($github, $github-invert),
+  "primary": ($primary, $primary-invert)
+);
+$colors: map-merge($colors, $addColors);
