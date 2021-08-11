@@ -8,7 +8,7 @@
     <template #brand>
       <b-navbar-item tag="nuxt-link" :to="{ path: '/' }">
         <img
-          src="~assets/images/logo.png"
+          src="~assets/images/rio-svg.svg"
           alt="eHandy logo"
         >
       </b-navbar-item>
@@ -45,10 +45,7 @@
       <b-navbar-item tag="div">
         <div class="buttons">
           <NuxtLink to="/sign-in" class="button is-primary">
-            Sign up
-          </NuxtLink>
-          <NuxtLink to="/sign-in" class="button is-light">
-            Log in
+            Hire me
           </NuxtLink>
         </div>
       </b-navbar-item>
