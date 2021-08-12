@@ -4,7 +4,7 @@
       <div class="container">
         <div class="columns reverse-columns">
           <div
-            class="column is-10-mobile is-4-tablet is-4-desktop is-4-widescreen is-4-fullhd  aos-init aos-animate"
+            class="column is-10-mobile is-5-tablet aos-init aos-animate"
             data-aos="fade-down"
           >
             <h1 class="title titled is-1 mb-6">
@@ -12,7 +12,7 @@
               My name is <span class="has-text-primary">Rio</span>
             </h1>
             <h2 class=" subtitled subtitle has-text-grey is-4 has-text-weight-normal is-family-sans-serif">
-              I am a Frontend Developer, Designer living in Ha Noi, Viet Nam.
+              Web Designer & Developer.<br>
               My expertise is in conceptualizing, designing, building e-commerce websites, especially with <span style="color: #3e8f16;">Shopify</span>.
             </h2>
             <div class="buttons">
@@ -46,7 +46,7 @@ export default class Banner extends Vue {
 </script>
 <style lang="scss" scoped>
 .columns {
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 </style>
