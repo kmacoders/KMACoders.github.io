@@ -2,7 +2,6 @@
   <b-navbar
     fixed-top
     transparent
-    shadow
     spaced
   >
     <template #brand>

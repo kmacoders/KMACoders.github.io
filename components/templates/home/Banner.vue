@@ -8,21 +8,25 @@
             data-aos="fade-down"
           >
             <h1 class="title titled is-1 mb-6">
-              Hi,<br>
-              I am <span style="color: rgb(255, 99, 3);">Rio</span>
+              Hello,<br>
+              My name is <span class="has-text-primary">Rio</span>
             </h1>
             <h2 class=" subtitled subtitle has-text-grey is-4 has-text-weight-normal is-family-sans-serif">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum cupiditate dolorum vitae dolores
-              nesciunt totam magni quas.
+              I am a Frontend Developer, Designer living in Ha Noi, Viet Nam.
+              My expertise is in conceptualizing, designing, building e-commerce websites, especially with <span style="color: #3e8f16;">Shopify</span>.
             </h2>
             <div class="buttons">
-              <button class="button is-primary">Resume</button>
-              <button class="button">Contact</button>
+              <button class="button is-primary">
+                Resume
+              </button>
+              <button class="button">
+                Contact</button>
             </div>
           </div>
           <div
             data-aos="fade-right"
-            class="column is-10-mobile is-4-tablet is-4-desktop is-4-widescreen is-4-fullhd aos-animate">
+            class="column is-10-mobile is-4-tablet is-4-desktop is-4-widescreen is-4-fullhd aos-animate"
+          >
             <figure class="image is-square">
               <img src="~assets/images/home/banner.svg">
             </figure>
