@@ -12,11 +12,11 @@
   </footer>
 </template>
 
-<script>
+<script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import IconFacebook from '@/components/atoms/icon/IconFacebook'
-import IconTwitter from '@/components/atoms/icon/IconTwitter'
-import IconGithub from '@/components/atoms/icon/IconGithub'
+import IconFacebook from '@/components/atoms/icon/IconFacebook.vue'
+import IconTwitter from '@/components/atoms/icon/IconTwitter.vue'
+import IconGithub from '@/components/atoms/icon/IconGithub.vue'
 
 @Component({
   components: {
