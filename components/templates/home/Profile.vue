@@ -10,16 +10,52 @@
           </div>
         </div>
         <div class="column is-12-mobile is-6-tablet">
-          <p class="has-text-primary">My info</p>
-          <h3 class="title is-3">About Me</h3>
+          <div class="profile-heading">
+            <div class="has-text-primary">My info</div>
+            <h3 class="title is-3">About Me</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate quaerat autem quas culpa, expedita ducimus animi labore. Modi quasi eligendi, possimus ratione aliquid, reprehenderit sapiente, quisquam eaque similique enim dolores.
+            </p>
+          </div>
           <div class="profile-info">
             <div class="profile-info__item">
               <div class="profile-info__icon">
-                Name
+                <span>
+                  <icon-person />
+                </span>
+                <span>
+                  Name
+                </span>
               </div>
               <div class="profile-info__detail">
                 Phung Thai Hung
               </div>
+            </div>
+            <div class="profile-info__item">
+              <div class="profile-info__icon">
+                <span>
+                  <icon-phone />
+                </span>
+                <span>
+                  Phone
+                </span>
+              </div>
+              <div class="profile-info__detail">
+                0868389736
+              </div>
+            </div>
+          </div>
+          <div class="profile-info__item">
+            <div class="profile-info__icon">
+              <span>
+                <icon-email />
+              </span>
+              <span>
+                Email
+              </span>
+            </div>
+            <div class="profile-info__detail">
+              hungphung.act@gmail.com
             </div>
           </div>
         </div>
@@ -30,11 +66,17 @@
 
 <script>
 import { Vue, Component } from 'nuxt-property-decorator'
+import IconEmail from '~/components/atoms/icon/IconEmail.vue'
+import IconPerson from '~/components/atoms/icon/IconPerson.vue'
+import IconPhone from '~/components/atoms/icon/IconPhone.vue'
 import BlobProfile from '~/components/atoms/illustrator/BlobProfile.vue'
 
 @Component({
   components: {
-    BlobProfile
+    BlobProfile,
+    IconPerson,
+    IconPhone,
+    IconEmail
   }
 })
 export default class Profile extends Vue {
@@ -50,7 +92,7 @@ export default class Profile extends Vue {
 
   svg {
     position: absolute;
-    top: 100px;
+    top: 7rem;
     left: 0;
     right: 0;
     bottom: 0;
@@ -59,6 +101,34 @@ export default class Profile extends Vue {
 
   img {
     z-index: 1;
+  }
+}
+
+.profile-heading {
+  margin: 5rem 0 1rem;
+
+  h3 {
+    margin: 1rem 0;
+  }
+}
+
+.profile-info__item {
+  display: flex;
+  align-items: center;
+
+  .profile-info__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      margin-right: 0.4rem;
+    }
+  }
+
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 }
 </style>
