@@ -1,7 +1,9 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="title is-2">Profile</h2>
+      <h2 class="title is-2">
+        Profile
+      </h2>
       <div class="columns">
         <div class="column is-12-mobile is-6-tablet">
           <div class="profile-avatar">
@@ -11,10 +13,15 @@
         </div>
         <div class="column is-12-mobile is-6-tablet">
           <div class="profile-heading">
-            <div class="has-text-primary">My info</div>
-            <h3 class="title is-3">About Me</h3>
+            <div class="has-text-primary">
+              My info
+            </div>
+            <h3 class="title is-3">
+              About Me
+            </h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate quaerat autem quas culpa, expedita ducimus animi labore. Modi quasi eligendi, possimus ratione aliquid, reprehenderit sapiente, quisquam eaque similique enim dolores.
+              For more than 1 year working with Shopify Theme,
+              in addition to customizing themes according to clients' requirements, I have experience as the leader of a team of about 5 other shopify developers.
             </p>
           </div>
           <div class="profile-info">
@@ -24,11 +31,11 @@
                   <icon-person />
                 </span>
                 <span>
-                  Name
+                  Fullname :
                 </span>
               </div>
               <div class="profile-info__detail">
-                Phung Thai Hung
+                Phùng Thái Hưng
               </div>
             </div>
             <div class="profile-info__item">
@@ -37,25 +44,31 @@
                   <icon-phone />
                 </span>
                 <span>
-                  Phone
+                  Phone :
                 </span>
               </div>
               <div class="profile-info__detail">
                 0868389736
               </div>
             </div>
-          </div>
-          <div class="profile-info__item">
-            <div class="profile-info__icon">
-              <span>
-                <icon-email />
-              </span>
-              <span>
-                Email
-              </span>
+            <div class="profile-info__item">
+              <div class="profile-info__icon">
+                <span>
+                  <icon-email />
+                </span>
+                <span>
+                  Email :
+                </span>
+              </div>
+              <div class="profile-info__detail">
+                hungphung.act@gmail.com
+              </div>
             </div>
-            <div class="profile-info__detail">
-              hungphung.act@gmail.com
+          </div>
+          <div class="profile-signature">
+            <img src="~assets/images/home/signature.png">
+            <div>
+              Phùng Thái Hưng
             </div>
           </div>
         </div>
@@ -66,6 +79,8 @@
 
 <script>
 import { Vue, Component } from 'nuxt-property-decorator'
+import IconBook from '~/components/atoms/icon/IconBook.vue'
+import IconCamera from '~/components/atoms/icon/IconCamera.vue'
 import IconEmail from '~/components/atoms/icon/IconEmail.vue'
 import IconPerson from '~/components/atoms/icon/IconPerson.vue'
 import IconPhone from '~/components/atoms/icon/IconPhone.vue'
@@ -76,7 +91,9 @@ import BlobProfile from '~/components/atoms/illustrator/BlobProfile.vue'
     BlobProfile,
     IconPerson,
     IconPhone,
-    IconEmail
+    IconEmail,
+    IconBook,
+    IconCamera
   }
 })
 export default class Profile extends Vue {
@@ -115,6 +132,7 @@ export default class Profile extends Vue {
 .profile-info__item {
   display: flex;
   align-items: center;
+  margin: 0.5rem 0;
 
   .profile-info__icon {
     display: flex;
@@ -124,11 +142,32 @@ export default class Profile extends Vue {
     span {
       margin-right: 0.4rem;
     }
+
+    span:last-child {
+      font-weight: 600;
+    }
   }
 
   svg {
     width: 1.2rem;
     height: 1.2rem;
+  }
+}
+
+.profile-signature {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 14rem;
+    height: auto;
+  }
+
+  div {
+    margin-top: 1rem;
   }
 }
 </style>
