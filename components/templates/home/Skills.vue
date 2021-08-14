@@ -59,15 +59,6 @@ export default class Skills extends Vue {
 }
 </script>
 <style lang="scss" scoped>
-$sass-color: #c69;
-$shopify-color: #64943e;
-$typescript-color: #007acc;
-$vue-color: #41b883;
-$nuxt-color: #3b8070;
-$vite-color: #b455cf;
-$webpack-color: #8dd6f9;
-$figma-color: #aaa;
-
 @mixin gridPosition($x, $y, $w, $h, $color) {
   grid-column: #{$x} / span #{$w};
   grid-row: #{$y}/ span #{$h};

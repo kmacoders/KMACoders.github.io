@@ -1,19 +1,22 @@
 <template>
   <div>
     <Banner />
+    <Profile />
     <Skills />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import Banner from '@/components/templates/home/Banner'
-import Skills from '@/components/templates/home/Skills'
+import Banner from '@/components/templates/home/Banner.vue'
+import Skills from '@/components/templates/home/Skills.vue'
+import Profile from '@/components/templates/home/Profile.vue'
 
 @Component({
   components: {
     Banner,
-    Skills
+    Skills,
+    Profile
   }
 })
 export default class Index extends Vue {
