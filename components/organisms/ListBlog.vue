@@ -21,6 +21,9 @@
           <h1 class="title post-title">
             {{ blog.title }}
           </h1>
+          <div>
+            {{ blog.published }}
+          </div>
           <p class="post-excerpt">
             {{ blog.description }}
           </p>

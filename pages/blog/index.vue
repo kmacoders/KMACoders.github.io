@@ -1,24 +1,16 @@
 <template>
-  <div class="container">
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <FeaturedBlog :first-blog="allArticles[0]" />
-            <ListBlog :list-blogs="paginatedArticles" />
-          </div>
-        </div>
-        <div class="columns">
-          <div class="column">
-            <Pagination
-              :total="allArticles.length"
-              :per-page="perPage"
-            />
-          </div>
-        </div>
+  <section class="blog-posts section">
+    <div class="container">
+      <FeaturedBlog :first-blog="allArticles[0]" />
+      <ListBlog :list-blogs="paginatedArticles" />
+      <div class="columns">
+        <Pagination
+          :total="allArticles.length"
+          :per-page="perPage"
+        />
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>

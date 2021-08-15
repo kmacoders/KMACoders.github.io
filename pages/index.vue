@@ -23,7 +23,8 @@ import Profile from '@/components/templates/home/Profile.vue'
 export default class Index extends Vue {
   mounted (): void {
     AOS.init({
-      duration: 500
+      duration: 500,
+      once: true
     })
   }
 }
