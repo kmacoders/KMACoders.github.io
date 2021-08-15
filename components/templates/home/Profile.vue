@@ -1,17 +1,26 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="title is-2">
+      <h2
+        class="title is-2"
+        data-aos="fade-up"
+      >
         <span class="has-underline is-level-5">Profile</span>
       </h2>
       <div class="columns">
-        <div class="column is-12-mobile is-6-tablet">
+        <div
+          class="column is-12-mobile is-6-tablet"
+          data-aos="fade-up"
+        >
           <div class="profile-avatar">
             <BlobProfile />
             <img src="~assets/images/home/phungthaihung.png">
           </div>
         </div>
-        <div class="column is-12-mobile is-6-tablet">
+        <div
+          class="column is-12-mobile is-6-tablet"
+          data-aos="fade-up"
+        >
           <div class="profile-heading">
             <div class="has-text-primary">
               My info

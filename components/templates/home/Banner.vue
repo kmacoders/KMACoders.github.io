@@ -2,10 +2,12 @@
   <section class="hero is-white">
     <div class="hero-body">
       <div class="container">
-        <div class="columns reverse-columns">
+        <div
+          class="columns reverse-columns"
+        >
           <div
-            class="column is-12-mobile is-6-tablet aos-init aos-animate"
-            data-aos="fade-down"
+            class="column is-12-mobile is-6-tablet"
+            data-aos="fade-right"
           >
             <h1 class="title titled is-1 mb-6">
               Hello,<br>
@@ -20,12 +22,13 @@
                 Resume
               </button>
               <button class="button">
-                Contact</button>
+                Contact
+              </button>
             </div>
           </div>
           <div
-            data-aos="fade-right"
-            class="column is-12-mobile is-6-tablet aos-animate"
+            data-aos="fade-left"
+            class="column is-12-mobile is-6-tablet"
           >
             <figure class="image is-square">
               <img src="~assets/images/home/banner.svg">

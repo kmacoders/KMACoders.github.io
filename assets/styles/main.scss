@@ -1,6 +1,9 @@
 // Bat buoc
 @import "~bulma/sass/utilities/_all";
 
+// Vendor
+@import './vendors/vendors-dir.scss';
+
 // Base
 @import './base/override';
 @import './base/typography';

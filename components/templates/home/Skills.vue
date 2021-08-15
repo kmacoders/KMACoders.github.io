@@ -1,34 +1,61 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="title is-2">
+      <h2
+        class="title is-2"
+        data-aos="fade-up"
+      >
         <span class="has-underline is-level-5">
           Skills
         </span>
       </h2>
       <ul class="skill-wrapper">
-        <li class="skill-item is-scss">
+        <li
+          class="skill-item is-scss"
+          data-aos="fade-up"
+        >
           <IconScss />
         </li>
-        <li class="skill-item is-shopify">
+        <li
+          class="skill-item is-shopify"
+          data-aos="fade-up"
+        >
           <icon-shopify />
         </li>
-        <li class="skill-item is-typescript">
+        <li
+          class="skill-item is-typescript"
+          data-aos="fade-up"
+        >
           <icon-typescript />
         </li>
-        <li class="skill-item is-vue">
+        <li
+          class="skill-item is-vue"
+          data-aos="fade-up"
+        >
           <icon-vue />
         </li>
-        <li class="skill-item is-nuxt">
+        <li
+          class="skill-item is-nuxt"
+          data-aos="fade-up"
+        >
           <icon-nuxt />
         </li>
-        <li class="skill-item is-vite">
+        <li
+          class="skill-item is-vite"
+          data-aos="fade-up"
+        >
           <icon-vite />
         </li>
-        <li class="skill-item is-webpack">
+        <li
+          class="skill-item is-webpack"
+          data-aos="fade-up"
+        >
           <icon-webpack />
         </li>
-        <li class="skill-item is-figma">
+        <li
+          class="skill-item is-figma"
+          data-aos="fade-up"
+        >
           <icon-figma />
         </li>
       </ul>
