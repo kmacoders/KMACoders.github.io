@@ -4,7 +4,7 @@ module.exports = {
   ],
   rules: {
     'at-rule-no-unknown': [true, {
-      ignoreAtRules: ['function', 'if', 'else', 'each', 'include', 'mixin', 'return']
+      ignoreAtRules: ['function', 'if', 'else', 'each', 'include', 'mixin', 'return', 'for']
     }]
   }
 }

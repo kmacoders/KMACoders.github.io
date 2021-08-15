@@ -1,10 +1,15 @@
 // Bat buoc
 @import "~bulma/sass/utilities/_all";
+
 // Base
 @import './base/override';
 @import './base/typography';
+
 // Utils
-//@import './utils/utils-dir';
+//@import './utils/utils-dir'; => import global in nuxtconfig
+
+// Components
+@import './components/has-underline';
 
 // Bat buoc
 @import "~bulma";

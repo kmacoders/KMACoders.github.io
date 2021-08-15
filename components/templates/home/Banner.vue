@@ -4,7 +4,7 @@
       <div class="container">
         <div class="columns reverse-columns">
           <div
-            class="column is-10-mobile is-5-tablet aos-init aos-animate"
+            class="column is-12-mobile is-6-tablet aos-init aos-animate"
             data-aos="fade-down"
           >
             <h1 class="title titled is-1 mb-6">
@@ -25,7 +25,7 @@
           </div>
           <div
             data-aos="fade-right"
-            class="column is-10-mobile is-4-tablet is-4-desktop is-4-widescreen is-4-fullhd aos-animate"
+            class="column is-12-mobile is-6-tablet aos-animate"
           >
             <figure class="image is-square">
               <img src="~assets/images/home/banner.svg">

@@ -1,7 +1,11 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="title is-2">Skills</h2>
+      <h2 class="title is-2">
+        <span class="has-underline is-level-5">
+          Skills
+        </span>
+      </h2>
       <ul class="skill-wrapper">
         <li class="skill-item is-scss">
           <IconScss />

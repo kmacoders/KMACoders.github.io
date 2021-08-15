@@ -1,0 +1,36 @@
+.has-underline {
+  position: relative;
+
+  &::after {
+    @include box(2rem, 5px);
+
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: $rio-primary-color;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.has-underline:hover {
+  &::after {
+    @include box(100%, 5px);
+
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@for $i from 1 through 3 {
+  .has-underline.is-level-#{$i} {
+    &::after {
+      @include box(2rem, #{$i}px);
+    }
+  }
+
+  .has-underline.is-level-#{$i}:hover {
+    &::after {
+      @include box(100%, #{$i}px);
+    }
+  }
+}

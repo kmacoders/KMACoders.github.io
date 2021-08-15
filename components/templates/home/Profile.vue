@@ -2,7 +2,7 @@
   <section class="section">
     <div class="container">
       <h2 class="title is-2">
-        Profile
+        <span class="has-underline is-level-5">Profile</span>
       </h2>
       <div class="columns">
         <div class="column is-12-mobile is-6-tablet">
