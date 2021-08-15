@@ -1,12 +1,10 @@
 <template>
   <div class="container">
-    <MinimalBanner />
     <section class="section">
       <div class="container">
         <div class="columns">
           <div class="column">
             <FeaturedBlog :first-blog="allArticles[0]" />
-            <hr>
             <ListBlog :list-blogs="paginatedArticles" />
           </div>
         </div>

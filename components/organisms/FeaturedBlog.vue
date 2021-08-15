@@ -1,8 +1,10 @@
 <template>
   <div class="columns featured-post is-multiline">
     <div class="column is-12 post">
-      <h2 class="featured-post__title title is-3 has-text-primary">
-        {{ featuredTitle }}
+      <h2 class="featured-post__title title is-2">
+        <span class="has-underline is-level-5">
+          {{ featuredTitle }}
+        </span>
       </h2>
       <article class="columns featured">
         <div class="column is-7 post-img ">
@@ -59,23 +61,6 @@ export default class FeaturedBlog extends Vue {
   .featured-post__title {
     position: relative;
     width: fit-content;
-  }
-
-  .featured-post__title::after {
-    content: '';
-    width: 60px;
-    height: 4px;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    background-color: #242424;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .featured-post__title:hover {
-    &::after {
-      width: 100%;
-    }
   }
 }
 </style>
