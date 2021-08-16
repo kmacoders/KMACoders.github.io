@@ -11,33 +11,12 @@
           <img :src="firstBlog.image" :alt="firstBlog.title">
         </div>
         <div class="column is-5">
-          <div>
-            <div class="feature-content__time">
-              {{ firstBlog.published }}
-            </div>
-            <h3 class="title is-3 post-title">
-              {{ firstBlog.title }}
-            </h3>
-            <h6 class="heading post-category">
-              <NuxtLink
-                v-for="(tag, index) in firstBlog.tags"
-                :key="index"
-                to="/"
-              >
-                {{ tag }}
-              </NuxtLink>
-            </h6>
-            <p class="post-excerpt">
-              {{ firstBlog.description }}
-            </p>
-            <br>
-            <NuxtLink
-              :to="{name: 'blog-slug', params: { slug: firstBlog.slug }}"
-              class="button is-primary"
-            >
-              Đọc thêm
-            </NuxtLink>
-          </div>
+          <BlogItemPreview
+            :tags="firstBlog.tags"
+            :title="firstBlog.title"
+            :description="firstBlog.description"
+            :slug="firstBlog.slug"
+          />
         </div>
       </article>
     </div>
@@ -45,17 +24,20 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'nuxt-property-decorator'
+import { PropType } from 'vue'
+import { Vue, Component, Prop } from 'nuxt-property-decorator'
+import BlogItemPreview from '@/components/molecules/BlogItemPreview.vue'
+import { IContent } from '~/types/content/page'
 
 @Component({
-  props: {
-    firstBlog: {
-      type: Object,
-      required: true
-    }
+  components: {
+    BlogItemPreview
   }
 })
-export default class FeaturedBlog extends Vue {}
+export default class FeaturedBlog extends Vue {
+  @Prop({ type: Object as PropType<IContent>, required: true })
+  firstBlog!: IContent
+}
 </script>
 <style lang="scss">
 .featured-post {

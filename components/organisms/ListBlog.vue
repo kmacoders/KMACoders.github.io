@@ -7,52 +7,37 @@
     >
       <article class="columns is-multiline">
         <div class="column is-12 post-img">
-          <img :src="blog.image" alt="Featured Image">
+          <img :src="blog.image" :alt="blog.title">
         </div>
-        <div class="column is-12 featured-content ">
-          <h3 class="heading post-category">
-            <span
-              v-for="(tag, i) in blog.tags"
-              :key="i"
-            >
-              {{ tag }}
-            </span>&nbsp;
-          </h3>
-          <h1 class="title post-title">
-            {{ blog.title }}
-          </h1>
-          <div>
-            {{ blog.published }}
-          </div>
-          <p class="post-excerpt">
-            {{ blog.description }}
-          </p>
-          <br>
-          <NuxtLink
-            :to="{ name: 'blog-slug', params: { slug: blog.slug }}"
-            class="button is-primary"
-          >
-            Đọc thêm
-          </NuxtLink>
+        <div class="column is-12">
+          <BlogItemView
+            :tags="blog.tags"
+            :title="blog.title"
+            :description="blog.description"
+            :slug="blog.slug"
+          />
         </div>
       </article>
     </div>
   </div>
 </template>
 
-<script>
-import { Vue, Component } from 'nuxt-property-decorator'
+<script lang="ts">
+import { PropType } from 'vue'
+import { Vue, Component, Prop } from 'nuxt-property-decorator'
+import BlogItemView from '@/components/molecules/BlogItemPreview.vue'
+import { IContent } from '~/types/content/page'
 
 @Component({
-  props: {
-    listBlogs: {
-      type: Array,
-      require: true
-    }
+  components: {
+    BlogItemView
   }
 })
 export default class ListBlog extends Vue {
-  isFour (position) {
+  @Prop({ type: Array as PropType<IContent[]>, required: true })
+  listBlogs!: IContent[]
+
+  isFour (position: number): string {
     if (position <= 2 && this.listBlogs.length > 5) {
       return ' is-6'
     }
