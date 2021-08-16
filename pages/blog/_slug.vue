@@ -120,11 +120,13 @@ section.blog-detail__intro {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 200;
   }
 
   h1.blog-detail__title {
     margin-top: 0.5rem;
     text-align: center;
+    color: $rio-primary-color;
   }
 
   .blog-detail__description {
@@ -149,6 +151,18 @@ section.blog-detail__content {
   h6 {
     a[aria-hidden="true"] {
       display: none;
+    }
+  }
+
+  .nuxt-content h2 {
+    position: relative;
+    padding-left: 2rem;
+
+    &::before {
+      content: '#';
+      position: absolute;
+      left: 0;
+      color: $rio-primary-color;
     }
   }
 }
