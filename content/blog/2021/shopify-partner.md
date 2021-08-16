@@ -1,7 +1,7 @@
 ---
 title: Shopify partner
 description: 'Empower your NuxtJS application with @nuxt/content module: write in a content/ directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a Git-based Headless CMS.'
-author: 'Huwng'
+author: 'Rio'
 image: 'http://placekitten.com/g/1920/1080'
 tags: ['VueJS', 'Shopify']
 published: '2022-06-30'

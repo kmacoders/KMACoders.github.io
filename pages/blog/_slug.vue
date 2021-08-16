@@ -1,29 +1,27 @@
 <template>
-  <div class="blog-detail container is-max-desktop content">
-    <section class="blog-detail__featured-img" style="margin-top: 2rem;">
-      <img :src="blogDetail.image">
-    </section>
-    <section class="section blog-detail__info">
-      <h1 class="title is-1 has-text-primary">
-        {{ blogDetail.title }}
-      </h1>
-      <div>
-        {{ blogDetail.description }}
-      </div>
-      <div>
-        <span>{{ blogDetail.author }}</span>
-        <span>{{ blogDetail.published }}</span>
-      </div>
-      <hr>
-    </section>
-    <section class="section">
-      <div class="columns">
-        <div class="column">
-          <nuxt-content :document="blogDetail" />
+  <section class="section blog-detail">
+    <div class="container is-max-desktop content">
+      <section class="blog-detail__intro">
+        <div class="blog-detail__createby">
+          <span class="blog-detail__author">{{ blogDetail.author }}</span>
+          &nbsp;on&nbsp;
+          <span class="blog-detail__published">{{ blogDetail.published }}</span>
         </div>
-      </div>
-    </section>
-  </div>
+        <h1 class="blog-detail__title title is-2">
+          {{ blogDetail.title }}
+        </h1>
+        <div class="blog-detail__description">
+          {{ blogDetail.description }}
+        </div>
+      </section>
+      <section class="blog-detail__featured-img">
+        <img :src="blogDetail.image">
+      </section>
+      <section class="blog-detail__content">
+        <nuxt-content :document="blogDetail" />
+      </section>
+    </div>
+  </section>
 </template>
 <script>
 import { Vue, Component } from 'nuxt-property-decorator'
@@ -112,17 +110,46 @@ import getSiteMeta from '@/utils/getSiteMeta'
 export default class BlogDetail extends Vue {}
 </script>
 <style lang="scss">
-.blog-detail {
-  section:not(:last-child) {
-    padding-bottom: 0;
+section.blog-detail__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .blog-detail__createby {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  section:not(:first-child) {
-    padding-top: 1rem;
+  h1.blog-detail__title {
+    margin-top: 0.5rem;
+    text-align: center;
   }
 
-  [aria-hidden="true"] {
-    display: none;
+  .blog-detail__description {
+    text-align: center;
+  }
+}
+
+section.blog-detail__featured-img {
+  margin: 2rem 0;
+
+  @include responsive(MD) {
+    margin: 3rem 0;
+  }
+}
+
+section.blog-detail__content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a[aria-hidden="true"] {
+      display: none;
+    }
   }
 }
 </style>
