@@ -1,14 +1,18 @@
 <template>
   <section class="blog-posts section">
     <div class="container">
-      <FeaturedBlog :first-blog="allArticles[0]" />
-      <ListBlog :list-blogs="paginatedArticles" />
-      <div class="columns">
+      <section class="blog-featured">
+        <FeaturedBlog :first-blog="allArticles[0]" />
+      </section>
+      <section class="blog-list">
+        <ListBlog :list-blogs="paginatedArticles" />
+      </section>
+      <section class="blog-pagination">
         <Pagination
           :total="allArticles.length"
           :per-page="perPage"
         />
-      </div>
+      </section>
     </div>
   </section>
 </template>
@@ -24,19 +28,23 @@ import ListBlog from '@/components/organisms/ListBlog.vue'
     FeaturedBlog,
     ListBlog
   },
-  async asyncData ({ $content, params, error }) {
+  watchQuery: ['page'],
+  async asyncData ({ $content, route, error }) {
+    const blogPath = 'blog'
     const perPage = 8
-    const content = await getContent($content, params, error, 'blog')
+    const currentPage = Number(route.query.page) || 1
+    const content = await getContent($content, currentPage, perPage, error, blogPath)
 
     return {
       allArticles: content.allArticles,
       paginatedArticles: content.paginatedArticles,
-      perPage
+      perPage,
+      currentPage
     }
   },
   head () {
     return {
-      title: `Blog page ${this.$route.params.page} - eHanndy`,
+      title: `Rio Blog - Page ${this.currentPage} of ${Math.ceil(this.allArticles.length / this.perPage)}`,
       link: [
         {
           hid: 'canonical',
@@ -51,3 +59,8 @@ import ListBlog from '@/components/organisms/ListBlog.vue'
 export default class PageBlog extends Vue {
 }
 </script>
+<style lang="scss" scoped>
+.blog-pagination {
+  margin-top: 10rem;
+}
+</style>

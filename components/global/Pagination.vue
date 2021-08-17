@@ -1,13 +1,29 @@
 <template>
-  <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
-    <a class="pagination-previous">Previous</a>
-    <a class="pagination-next">Next page</a>
+  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    <NuxtLink
+      :to="{ query: { page: prevPage } }"
+      :class="'pagination-previous' + (isFirstPage ? ' is-disabled' : '')"
+    >
+      Previous
+    </NuxtLink>
+    <NuxtLink
+      :to="{ query: { page: nextPage } }"
+      :class="'pagination-next' + (isLastPage ? ' is-disabled' : '')"
+    >
+      Next page
+    </NuxtLink>
     <ul class="pagination-list">
-      <li>
-        Page {{ currentPage }} / {{ totalPage }}
+      <li v-for="(page, index) in totalPage" :key="index">
+        <NuxtLink
+          :to="{ query: { page: index + 1 }}"
+          :class="'pagination-link ' + (currentPage === (index + 1) ? 'is-current' : '')"
+        >
+          {{ index + 1 }}
+        </NuxtLink>
       </li>
     </ul>
   </nav>
+
 </template>
 <script>
 import { Vue, Component, Prop } from 'nuxt-property-decorator'
@@ -39,11 +55,6 @@ export default class Pagination extends Vue {
 
   get isLastPage () {
     return this.currentPage === this.totalPage
-  }
-
-  mounted () {
-    console.log('Total page: ' + this.totalPage)
-    console.log('Current page: ' + this.currentPage)
   }
 }
 </script>

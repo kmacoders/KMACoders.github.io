@@ -1,9 +1,4 @@
-export default async ($content, params, error, path) => {
-  const currentPage = parseInt(params.page)
-  /**
-   * Số items trên 1 page
-   */
-  const perPage = 14
+export default async ($content, currentPage, perPage, error, path) => {
   const allArticles = await $content(path, { deep: true })
     .sortBy('published', 'desc')
     .fetch()
