@@ -65,6 +65,7 @@ export default class Pagination extends Vue {
 
   onChangePage (pageNumber) {
     this.$router.push({ path: this.$route.path, query: { page: pageNumber } })
+    console.log(this.$route.query.page)
   }
 }
 </script>

@@ -29,14 +29,11 @@ import ListBlog from '@/components/organisms/ListBlog.vue'
     ListBlog
   },
   watchQuery: ['page'],
-  async asyncData ({ $content, params, route, error }) {
+  async asyncData ({ $content, route, error }) {
     const blogPath = 'blog'
     const perPage = 8
     const currentPage = Number(route.query.page) || 1
     const content = await getContent($content, currentPage, perPage, error, blogPath)
-
-    console.log(`change page to ${currentPage}`)
-    console.log(params.page)
 
     return {
       allArticles: content.allArticles,
