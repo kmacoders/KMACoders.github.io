@@ -22,6 +22,12 @@
         </NuxtLink>
       </li>
     </ul>
+    <button @click="onChangePage(nextPage)">
+      next
+    </button>
+    <button @click="onChangePage(prevPage)">
+      prev
+    </button>
   </nav>
 
 </template>
@@ -55,6 +61,10 @@ export default class Pagination extends Vue {
 
   get isLastPage () {
     return this.currentPage === this.totalPage
+  }
+
+  onChangePage (pageNumber) {
+    this.$router.push({ path: this.$route.path, query: { page: pageNumber } })
   }
 }
 </script>
