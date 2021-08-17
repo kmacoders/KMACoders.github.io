@@ -35,6 +35,8 @@ import ListBlog from '@/components/organisms/ListBlog.vue'
     const currentPage = Number(route.query.page) || 1
     const content = await getContent($content, currentPage, perPage, error, blogPath)
 
+    console.log(`change page to ${currentPage}`)
+
     return {
       allArticles: content.allArticles,
       paginatedArticles: content.paginatedArticles,
