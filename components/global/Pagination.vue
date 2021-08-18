@@ -1,13 +1,13 @@
 <template>
   <nav class="pagination is-centered" role="navigation" aria-label="pagination">
     <NuxtLink
-      :to="{ query: { page: prevPage } }"
+      :to="{ name: 'blog-page-page', params: { page: prevPage } }"
       :class="'pagination-previous' + (isFirstPage ? ' is-disabled' : '')"
     >
       Previous
     </NuxtLink>
     <NuxtLink
-      :to="{ query: { page: nextPage } }"
+      :to="{ name: 'blog-page-page', params: { page: nextPage } }"
       :class="'pagination-next' + (isLastPage ? ' is-disabled' : '')"
     >
       Next page
@@ -15,19 +15,13 @@
     <ul class="pagination-list">
       <li v-for="(page, index) in totalPage" :key="index">
         <NuxtLink
-          :to="{ query: { page: index + 1 }}"
+          :to="{ name: 'blog-page-page', params: { page: index + 1 }}"
           :class="'pagination-link ' + (currentPage === (index + 1) ? 'is-current' : '')"
         >
           {{ index + 1 }}
         </NuxtLink>
       </li>
     </ul>
-    <button @click="onChangePage(nextPage)">
-      next
-    </button>
-    <button @click="onChangePage(prevPage)">
-      prev
-    </button>
   </nav>
 
 </template>
@@ -44,7 +38,7 @@ export default class Pagination extends Vue {
   }
 
   get currentPage () {
-    return Number(this.$route.query.page) || 1
+    return Number(this.$route.params.page) || 1
   }
 
   get nextPage () {
@@ -61,11 +55,6 @@ export default class Pagination extends Vue {
 
   get isLastPage () {
     return this.currentPage === this.totalPage
-  }
-
-  onChangePage (pageNumber) {
-    this.$router.push({ path: this.$route.path, query: { page: pageNumber } })
-    console.log(this.$route.query.page)
   }
 }
 </script>
