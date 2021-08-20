@@ -27,6 +27,7 @@
           :key="index"
           :label="nav.title"
           collapsible
+          hoverable
         >
           <b-navbar-item
             v-for="(sub, i) in nav.subMenu"
@@ -41,6 +42,9 @@
     </template>
 
     <template #end>
+      <b-navbar-item tag="div">
+        <TheSearcher />
+      </b-navbar-item>
       <b-navbar-item tag="div">
         <div class="buttons">
           <NuxtLink to="/sign-in" class="button is-primary">
