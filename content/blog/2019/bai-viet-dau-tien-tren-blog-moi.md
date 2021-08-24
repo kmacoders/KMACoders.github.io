@@ -1,7 +1,7 @@
 ---
 title: Bài viết đầu tiên trên Blog mới
 description: 'Bài viết này thực ra được viết từ 10/08/2019. Đây cũng là bài viết đầu tiên tại blog kmacoders.github.io ngày ấy, thời điểm mà mình biết những dòng mà mình đang gõ ra đã có những người đầu tiên đọc.'
-author: 'Huwng'
+author: 'Hưng'
 image: '/blog/2019/2019-kmacoders-1.jpeg'
 tags: ['stories']
 published: '2019-08-10'

@@ -1,7 +1,7 @@
 ---
 title: Chuyện không đầu không đuôi
 description: 'Chuyện không đầu không đuôi là một chuyện không có đầu cũng không có đuôi nên được gọi là chuyện không đầu không đuôi.'
-author: 'Huwng'
+author: 'Hưng'
 image: '/blog/2020/06/2020-06-note.jpeg'
 tags: ['stories']
 published: '2020-06-08'

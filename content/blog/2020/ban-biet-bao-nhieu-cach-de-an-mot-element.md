@@ -1,10 +1,10 @@
 ---
 title: Bạn biết bao nhiêu cách để ẩn một element
-description: ''
-author: 'Huwng'
-image: '/blog/2020/06/2020-06-note.jpeg'
-tags: ['stories']
-published: '2020-06-08'
+description: 'Nhắc đến việc show, hide một element trong Document chắc ai cũng sẽ nhớ ngay đến giá trị none của display trong CSS. Vậy thì có bao giờ bạn thắc mắc về những cách làm nào khác cho kết quả tương tự không ?'
+author: 'Hưng'
+image: '/blog/2020/06/2020-06-css.jpeg'
+tags: ['css']
+published: '2020-06-10'
 ---
 ## Đặt vấn đề
 Người ta hay nói rằng CSS là một kiểu “easy to learn, hard to master”. Đại loại là một người vừa học web được 1 tuần cũng nói là biết CSS, một frontend vài năm exp cũng chỉ nói là biết CSS.
