@@ -9,9 +9,13 @@
         <span class="tag is-light is-normal mr-2">{{ tag }}</span>
       </NuxtLink>
     </h3>
-    <h1 class="blog-item-preview__title title has-text-primary">
-      {{ title }}
-    </h1>
+    <NuxtLink
+      :to="{ name: 'blog-slug', params: { slug: slug }}"
+    >
+      <h1 class="blog-item-preview__title title has-text-primary">
+        {{ title }}
+      </h1>
+    </NuxtLink>
     <p class="blog-item-preview__description">
       {{ description }}
     </p>
