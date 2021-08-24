@@ -8,7 +8,9 @@
       </h2>
       <article class="columns">
         <div class="column is-7">
-          <img :src="firstBlog.image" :alt="firstBlog.title">
+          <BlogItemImage
+            :image-url="firstBlog.image"
+          />
         </div>
         <div class="column is-5">
           <BlogItemPreview
@@ -27,11 +29,13 @@
 import { PropType } from 'vue'
 import { Vue, Component, Prop } from 'nuxt-property-decorator'
 import BlogItemPreview from '@/components/molecules/BlogItemPreview.vue'
+import BlogItemImage from '@/components/molecules/BlogItemImage.vue'
 import { IContent } from '~/types/content/page'
 
 @Component({
   components: {
-    BlogItemPreview
+    BlogItemPreview,
+    BlogItemImage
   }
 })
 export default class FeaturedBlog extends Vue {

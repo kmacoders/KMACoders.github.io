@@ -6,8 +6,10 @@
       :class="'column post' + isFour(index + 1)"
     >
       <article class="columns is-multiline">
-        <div class="column is-12 post-img">
-          <img :src="blog.image" :alt="blog.title">
+        <div class="column is-12">
+          <BlogItemImage
+            :image-url="blog.image"
+          />
         </div>
         <div class="column is-12">
           <BlogItemView
@@ -26,11 +28,13 @@
 import { PropType } from 'vue'
 import { Vue, Component, Prop } from 'nuxt-property-decorator'
 import BlogItemView from '@/components/molecules/BlogItemPreview.vue'
+import BlogItemImage from '@/components/molecules/BlogItemImage.vue'
 import { IContent } from '~/types/content/page'
 
 @Component({
   components: {
-    BlogItemView
+    BlogItemView,
+    BlogItemImage
   }
 })
 export default class ListBlog extends Vue {
