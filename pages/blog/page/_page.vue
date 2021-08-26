@@ -2,9 +2,19 @@
   <section class="blog-posts section">
     <div class="container">
       <section class="blog-featured">
+        <h2 class="title is-2">
+          <span class="has-underline is-level-5">
+            Latest
+          </span>
+        </h2>
         <FeaturedBlog :first-blog="allArticles[0]" />
       </section>
-      <section class="blog-list">
+      <section class="blog-list mt-6">
+        <h2 class="title is-2">
+          <span class="has-underline is-level-5">
+           All
+          </span>
+        </h2>
         <ListBlog :list-blogs="paginatedArticles" />
       </section>
       <section class="blog-pagination">
@@ -31,7 +41,7 @@ import ListBlog from '@/components/organisms/ListBlog.vue'
   watchQuery: ['page'],
   async asyncData ({ $content, params, error }) {
     const blogPath = 'blog'
-    const perPage = 8
+    const perPage = 5
     const currentPage = Number(params.page) || 1
     const content = await getContent($content, currentPage, perPage, error, blogPath)
 

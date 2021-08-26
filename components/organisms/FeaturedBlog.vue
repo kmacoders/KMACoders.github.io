@@ -1,11 +1,6 @@
 <template>
   <div class="columns">
     <div class="column is-12">
-      <h2 class="title is-2">
-        <span class="has-underline is-level-5">
-          Latest
-        </span>
-      </h2>
       <article class="columns">
         <div class="column is-7">
           <BlogItemImage

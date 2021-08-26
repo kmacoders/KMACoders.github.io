@@ -42,7 +42,7 @@ export default class ListBlog extends Vue {
   listBlogs!: IContent[]
 
   isFour (position: number): string {
-    if (position <= 2 && this.listBlogs.length > 5) {
+    if (position <= 2 && this.listBlogs.length >= 5) {
       return ' is-6'
     }
     return ' is-4'
