@@ -18,7 +18,7 @@
               My expertise is in conceptualizing, designing, building e-commerce websites, especially with <span style="color: #3e8f16;">Shopify</span>.
             </h2>
             <div class="buttons">
-              <NuxtLink :to="{ name: 'blog'}">
+              <NuxtLink :to="{ name: 'blog'}" class="mr-2">
                 <button class="button is-primary">
                   My Blog
                 </button>
