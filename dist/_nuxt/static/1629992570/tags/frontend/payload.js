@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tags/Frontend", {data:[{blogsByTag:[]}],fetch:{},mutations:void 0});
