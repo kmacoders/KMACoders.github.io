@@ -1,6 +1,14 @@
 import global from './global'
 
-export default (meta) => {
+interface IMeta {
+  description: string;
+  type: string;
+  url: string;
+  title: string;
+  mainImage: string;
+}
+
+export default (meta: IMeta) => {
   return [
     {
       hid: 'description',

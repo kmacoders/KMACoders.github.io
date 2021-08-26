@@ -23,33 +23,34 @@
     </div>
   </section>
 </template>
-<script>
+
+<script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import global from '@/utils/global'
 import getSiteMeta from '@/utils/getSiteMeta'
 import Prism from '~/plugins/prism'
+import { IContent } from '~/types/content/page'
 
 @Component({
   name: 'BlogPage',
   async asyncData ({ $content, params }) {
     const findedBlog = await $content('blog', { deep: true })
       .where({ slug: params.slug })
-      .fetch()
+      .fetch<IContent[]>()
     const [blogDetail] = findedBlog
-    console.log(blogDetail)
 
     const [prev, next] = await $content('blog', { deep: true })
       .only(['title', 'slug', 'published'])
       .sortBy('published', 'desc')
       .surround(params.slug)
-      .fetch()
+      .fetch<IContent[]>()
 
     const allBlogs = await $content('blog', { deep: true })
       .only(['title', 'description', 'image', 'slug', 'published', 'tags'])
       .sortBy('published', 'desc')
       .fetch()
 
-    const blogsByTag = allBlogs.filter((blog) => {
+    const blogsByTag = allBlogs.filter((blog: IContent) => {
       const blogTags = blog.tags.map(x => x.toLowerCase())
       return blogTags.includes(blog.tags[0].toLowerCase())
     })
@@ -60,12 +61,30 @@ import Prism from '~/plugins/prism'
       prev,
       next
     }
-  },
+  }
+})
+export default class BlogDetail extends Vue {
+  blogDetail!: IContent
+
+  blogsByTag!: IContent[]
+
+  prev!: IContent
+
+  next!: IContent
+
   head () {
+    const metaData = {
+      type: 'website',
+      title: this.blogDetail.title,
+      description: this.blogDetail.description,
+      url: `${this.$config.baseUrl}/blog/${this.$route.params.slug}`,
+      mainImage: this.blogDetail.image
+    }
+
     return {
       title: this.blogDetail.title,
       meta: [
-        ...this.meta,
+        ...getSiteMeta(metaData),
         {
           property: 'blog:published_time',
           content: this.blogDetail.createdAt
@@ -94,21 +113,8 @@ import Prism from '~/plugins/prism'
         }
       ]
     }
-  },
-  computed: {
-    meta () {
-      const metaData = {
-        type: 'blog',
-        title: this.blogDetail.title,
-        description: this.blogDetail.description,
-        url: `${this.$config.baseUrl}/blog/${this.$route.params.slug}`,
-        mainImage: this.blogDetail.image
-      }
-      return getSiteMeta(metaData)
-    }
   }
-})
-export default class BlogDetail extends Vue {
+
   mounted () {
     Prism.highlightAll()
   }
