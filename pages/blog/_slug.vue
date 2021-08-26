@@ -27,6 +27,7 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 import global from '@/utils/global'
 import getSiteMeta from '@/utils/getSiteMeta'
+import Prism from '~/plugins/prism'
 
 @Component({
   name: 'BlogPage',
@@ -107,7 +108,11 @@ import getSiteMeta from '@/utils/getSiteMeta'
     }
   }
 })
-export default class BlogDetail extends Vue {}
+export default class BlogDetail extends Vue {
+  mounted () {
+    Prism.highlightAll()
+  }
+}
 </script>
 <style lang="scss">
 section.blog-detail__intro {
