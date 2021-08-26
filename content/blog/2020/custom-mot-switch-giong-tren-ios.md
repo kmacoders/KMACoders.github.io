@@ -25,8 +25,8 @@ Bước đầu tiên, là ta quan sát để tạo base cho HTML. Ta thấy Swit
 
 ``` html
 <label class="toggle" for="toggle">
- <input type="checkbox" id="toggle">
- <div class="slider"></div>
+  <input type="checkbox" id="toggle">
+  <div class="slider"></div>
 </label>
 ```
 
@@ -79,7 +79,7 @@ Tiếp đến, ta tạo nốt quả bóng. Lúc này ta cần sử dụng một 
   top: 5px;
   position: absolute;
   border-radius: 50%;
-  box-shadow: rgba(0,0,0,0.1) 0px 0px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px 5px;
 }
 ```
 
@@ -104,17 +104,17 @@ Nghĩ gì làm đấy, ta viết như này :
 Đối với quả bóng, nó cần lăn sang phải 1 chút ( một chút là bao nhiêu thì lát ta cùng tính ):
 
 ``` css
- input[type="checkbox"]:checked + .slider:before {
- transform: translateX(40px)
+input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(40px);
 }
 ```
 Đối với rãnh bao, nó cần chuyển sang màu xanh:
 
 ``` css
 
- input[type="checkbox"]:checked + .slider {
- background-color: #2dda77;
- border: none;
+input[type="checkbox"]:checked + .slider {
+  background-color: #2dda77;
+  border: none;
 }
 ```
 
@@ -136,6 +136,7 @@ Code CSS full sẽ như thế này :
 #toggle {
   display: none;
 }
+
 .slider {
   width: 100px;
   height: 60px;
@@ -158,13 +159,13 @@ Code CSS full sẽ như thế này :
 }
 
 input[type="checkbox"]:checked + .slider {
- background-color: #2dda77;
- border: none;
- transition: 0.4s;
+  background-color: #2dda77;
+  border: none;
+  transition: 0.4s;
 }
 
 input[type="checkbox"]:checked + .slider:before {
- transform: translateX(40px);
+  transform: translateX(40px);
 }
 ```
 

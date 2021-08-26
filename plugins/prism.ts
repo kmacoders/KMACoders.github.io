@@ -26,4 +26,5 @@ import 'prismjs/components/prism-bash.js'
 // Set vue SFC to markdown
 Prism.languages.vue = Prism.languages.markup
 
+// Import tại page dùng, k import global thừa assets
 export default Prism

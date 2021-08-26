@@ -18,7 +18,7 @@ Normal Flow là cách các phần tử HTML được sắp xếp và hiển th�
 Do mình ngại làm từng cách lên Codepen rồi dẫn link sang đây, nên là mình sẽ viết sẵn một cấu trúc dễ đọc dễ hiểu như này. Bạn có thể mở tạo ngay một cái tương tự và tự tay mình thử xem có thú vị không ?
 
 File HTML
-``` css
+``` html
 <div class="container">
   <div class="item green"></div>
   <div class="item red"></div>
@@ -31,17 +31,21 @@ File CSS
 .container {
   display: flex;
 }
+
 .item {
   width: 100px;
   height: 100px;
 }
+
 .green {
   background-color: green;
 }
+
 /* Chung ta se thuc hanh tren thanh .red nay... */
 .red {
   background-color: red;
 }
+
 .blue {
   background-color: blue;
 }
@@ -74,7 +78,7 @@ Chúng ta đã từng sử dụng các thuộc tính top, left, bottom, right đ
 ### HTML hidden attribute
 Rất đơn giản, thêm ngay attr hidden vào element chúng ta muốn ẩn trong HTML.
 
-``` css
+``` html
 <div class="container">
   <div class="item green"></div>
   <div class="item red" hidden></div>
@@ -110,8 +114,8 @@ Như vậy, ta có thể ẩn thằng red đi theo cách như này :
 
 ``` css
 .red {
-  color: rgba(0,0,0,0);
-  background-color: rgba(0,0,0,0);
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 ```
 Với hsla(0,0,0,0) cũng như thế thôi nhé. Tầm này màu gì không quan trọng, vì đằng nào alpha chẳng bằng 0 mà. Nên là nó thành trong suốt hết.
@@ -130,7 +134,7 @@ hoặc
 ``` css
 .red {
   background-color: red;
-  transform: translate(-999px, 0px);
+  transform: translate(-999px, 0);
 }
 ```
 Hay một cách lạ lùng.
@@ -167,7 +171,8 @@ Nói này cho dễ hình dung, ngày xưa ông cha ta hay lấy lá cây để c
   background-color: red;
   position: relative;
 }
-.red:after{
+
+.red::after {
   content:'';
   position: absolute;
   top: 0;
