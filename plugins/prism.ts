@@ -1,7 +1,7 @@
 import Prism from 'prismjs'
 
 // Include a theme:
-import 'prismjs/themes/prism-tomorrow.css'
+// import 'prismjs/themes/prism-solarizedlight.css'
 
 // Include the toolbar plugin: (optional)
 import 'prismjs/plugins/toolbar/prism-toolbar'

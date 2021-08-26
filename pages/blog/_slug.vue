@@ -159,16 +159,36 @@ section.blog-detail__content {
     }
   }
 
-  .nuxt-content h2 {
-    position: relative;
-    padding-left: 2rem;
+  .nuxt-content {
+    h2 {
+      position: relative;
+      padding-left: 2rem;
 
-    &::before {
-      content: '#';
-      position: absolute;
-      left: 0;
-      color: $rio-primary-color;
+      &::before {
+        content: '#';
+        position: absolute;
+        left: 0;
+        color: $rio-primary-color;
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  // Overide bulma css for prims hightlight
+  .nuxt-content-highlight {
+    .token.tag:not(body) {
+      display: inherit;
+      background-color: inherit;
+      border-radius: inherit;
+      font-size: inherit;
+      padding-left: inherit;
+      padding-right: inherit;
     }
   }
 }
+
 </style>

@@ -23,7 +23,7 @@ Switch là 1 thanh dạng Yes/No, như vậy thì chúng ta sẽ nghĩ đến nh
 
 Bước đầu tiên, là ta quan sát để tạo base cho HTML. Ta thấy Switch có 1 thanh trượt và 1 quả bóng trượt bên trong. Như vậy, ta sẽ ra được 1 cấu trúc HTML đơn giản như thế này :
 
-``` js
+``` html
 <label class="toggle" for="toggle">
  <input type="checkbox" id="toggle">
  <div class="slider"></div>
