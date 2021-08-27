@@ -25,7 +25,6 @@
       src="https://utteranc.es/client.js"
       repo="kmacoders/kmacoders.github.io"
       issue-term="pathname"
-      label="Your comments"
       theme="github-light"
       crossorigin="anonymous"
       async
