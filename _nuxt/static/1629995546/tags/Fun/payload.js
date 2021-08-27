@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/tags/Fun", {data:[{blogsByTag:[]}],fetch:{},mutations:void 0});

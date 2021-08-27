@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/tags/Share", {data:[{blogsByTag:[]}],fetch:{},mutations:void 0});
