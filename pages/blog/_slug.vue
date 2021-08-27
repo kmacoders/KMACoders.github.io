@@ -20,15 +20,10 @@
       <section class="blog-detail__content">
         <nuxt-content :document="blogDetail" />
       </section>
+      <section class="blog-detail__content">
+        <Comment />
+      </section>
     </div>
-    <script
-      src="https://utteranc.es/client.js"
-      repo="kmacoders/kmacoders.github.io"
-      issue-term="pathname"
-      theme="github-light"
-      crossorigin="anonymous"
-      async
-    />
   </section>
 </template>
 
