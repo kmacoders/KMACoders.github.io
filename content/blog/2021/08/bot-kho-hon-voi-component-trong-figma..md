@@ -45,5 +45,5 @@ Rồi xong, bạn có thể copy Component này đến bất cứ screen, page n
 ![Tạo Component](/images/blog/2021/08/27-doi-ten-component.png)
 
 ## Kết bài
-Yay, vậy là xong. Có rất nhiều cách để chúng ta có thể có 1 bản design tốt, không chỉ tốt cho chính team designer mà còn tốt cho cả team developer, và đây là một trong số các cách đó. Hi vọng phương pháp nhỏ nhỏ này có thể giúp cho các bạn có thêm một cách để quản lý nhưng thiết kế của mình. Thời gian tiết kiệm được thì đi làm thứ khác tội gì đúng không ?
+Yay, vậy là xong. Có rất nhiều cách để chúng ta có thể có 1 bản design tốt, không chỉ tốt cho chính team designer mà còn tốt cho cả team developer, và đây là một trong số các cách đó. Hi vọng phương pháp nhỏ nhỏ này có thể giúp cho các bạn có thêm một cách để quản lý những thiết kế của mình. Thời gian tiết kiệm được thì đi làm thứ khác tội gì đúng không ?
 
