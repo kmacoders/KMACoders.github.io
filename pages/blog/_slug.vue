@@ -20,7 +20,7 @@
       <section class="blog-detail__content">
         <nuxt-content :document="blogDetail" />
       </section>
-      <section class="blog-detail__content">
+      <section v-if="blogDetail.slug" class="blog-detail__content">
         <Comment />
       </section>
     </div>
@@ -36,7 +36,11 @@ import { IContent } from '~/types/content/page'
 
 @Component({
   name: 'BlogPage',
+  validate ({ params }) {
+    return params.slug !== undefined
+  },
   async asyncData ({ $content, params }) {
+    console.log(params.slug)
     const findedBlog = await $content('blog', { deep: true })
       .where({ slug: params.slug })
       .fetch<IContent[]>()

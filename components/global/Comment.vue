@@ -1,9 +1,7 @@
 <template>
   <div>
     <br>
-    <h6 class="title is-6">
-      Comments
-    </h6>
+    <div id="blog-comment" />
   </div>
 </template>
 
@@ -13,15 +11,20 @@ import { Vue, Component } from 'nuxt-property-decorator'
 @Component
 export default class Comment extends Vue {
   mounted (): void {
-    const scriptTag = document.createElement('SCRIPT')
-    scriptTag.setAttribute('src', 'https://utteranc.es/client.js')
+    const scriptTag = document.createElement('script') as HTMLScriptElement
+    scriptTag.async = true
+    scriptTag.src = 'https://utteranc.es/client.js'
     scriptTag.setAttribute('repo', 'kmacoders/kmacoders.github.io')
     scriptTag.setAttribute('issue-term', 'pathname')
     scriptTag.setAttribute('label', 'Comment')
     scriptTag.setAttribute('theme', 'github-light')
     scriptTag.setAttribute('crossorigin', 'anonymous')
-    scriptTag.setAttribute('async', 'async')
-    this.$el.append(scriptTag)
+
+    const blogCommentEl = document.getElementById('blog-comment')
+
+    if (blogCommentEl) {
+      blogCommentEl.appendChild(scriptTag)
+    }
   }
 }
 </script>
