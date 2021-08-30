@@ -1,3 +1,5 @@
+import getRoutes from "./utils/getRoutes"
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -51,8 +53,16 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://www.kmacoders.github.io',
+    routes () {
+      return getRoutes()
+    }
+  },
   styleResources: {
     scss: ['~assets/styles/utils/_utils-dir.scss']
   },
