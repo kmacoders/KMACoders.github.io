@@ -107,6 +107,9 @@ Lại một lần nữa cái khó ló cái khôn, với sự chỉ giáo của c
 Trước tiên, khoe nhẹ cái structure đã
 
 ![Webpack](/images/blog/2021/08/30-webpack-5.png)
+
+`New structure`
+
 ```
 ...
 ...
@@ -138,7 +141,9 @@ Khoan hãy nói về thằng parts này, quay lại với các concepts trong we
 -   [Mode](https://webpack.js.org/concepts/#mode)
 -   [Browser Compatibility](https://webpack.js.org/concepts/#browser-compatibility)
 Thế thì tại sao mình không chia nhỏ dựa trên các concepts này và chức năng của chúng. Nôm na thì 3 file common, dev, prod trên kia giờ sẽ biến thành thế này
-File webpack.common.js
+
+`webpack.common.js`
+
 ```js
 const  path  =  require('path');
 const commonPath =  require('./common-path');
@@ -184,6 +189,9 @@ Vậy thì việc này có tác dụng gì :
 
  - Tất nhiên lại là nó ngắn và gọn thôi rồi.
  - Khi muốn gỡ một chức năng nào đó, ví dụ gỡ styleLint khỏi project, mình chỉ cần đơn giản tìm đến đoạn code này, xoá đi là xong, thay vì phải lục cả đống config như ngày xưa. Nhất đâu xoá nhầm cả cái gì khác, ae code thấy lỗi thì thôi đem gạch về xây nhà.
+
+`webpack.common.js`
+
 ```js
 ...
 plugins.vueLoaderPlugin(),
@@ -194,6 +202,7 @@ parts.statsCommon()
 ...
 ```
 - Tiếp là nó giúp cho ae sửa nhanh hơn bao giờ hết. Ví dụ đoạn đổi port, mình config như thế này
+`webpack.dev.js`
 ```js
 const  hugDevConfig  =  merge([
 	{ mode:  'development' },
@@ -208,6 +217,8 @@ module.exports  =  hugDevConfig;
 ```
 
 Đó, muôn vài tiện ích. Quay trở lại với folder parts ban nãy, thì ở bên trong mình chia nhỏ ra theo các concepts rồi viếc các hàm nhỏ chứa config webpack. Ví dụ như chỗ port kia nhé
+
+`webpack.parts.js`
 ```js
 ...
 ...
@@ -252,6 +263,9 @@ exports.commonOptimize = () => ({
 ```
 
 Hay đây là một ví dụ cho Vue
+
+`webpack.modules.js`
+
 ```js
 exports.loadVue = () => ({
   module: {
@@ -275,6 +289,9 @@ exports.loadVue = () => ({
 })
 ```
 Và ở file common mình gọi
+
+`webpack.common.js`
+
 ```js
 modules.loadBabel(),
 modules.loadTypescript(),
