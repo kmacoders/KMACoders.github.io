@@ -40,7 +40,6 @@ import { IContent } from '~/types/content/page'
     return params.slug !== undefined
   },
   async asyncData ({ $content, params }) {
-    console.log(params.slug)
     const findedBlog = await $content('blog', { deep: true })
       .where({ slug: params.slug })
       .fetch<IContent[]>()

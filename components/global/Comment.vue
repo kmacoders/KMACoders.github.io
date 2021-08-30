@@ -13,11 +13,15 @@ export default class Comment extends Vue {
   mounted (): void {
     const scriptTag = document.createElement('script') as HTMLScriptElement
     scriptTag.async = true
-    scriptTag.src = 'https://utteranc.es/client.js'
-    scriptTag.setAttribute('repo', 'kmacoders/kmacoders.github.io')
-    scriptTag.setAttribute('issue-term', 'pathname')
-    scriptTag.setAttribute('label', 'Comment')
-    scriptTag.setAttribute('theme', 'github-light')
+    scriptTag.src = 'https://giscus.app/client.js'
+    scriptTag.setAttribute('data-repo', 'kmacoders/kmacoders.github.io')
+    scriptTag.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnkzOTQ3MTY1NDA=')
+    scriptTag.setAttribute('data-category', 'General')
+    scriptTag.setAttribute('data-category-id', 'DIC_kwDOF4blfM4B-3jc')
+    scriptTag.setAttribute('data-mapping', 'pathname')
+    scriptTag.setAttribute('data-reactions-enabled', '1')
+    scriptTag.setAttribute('data-emit-metadata', '0')
+    scriptTag.setAttribute('data-theme', 'light')
     scriptTag.setAttribute('crossorigin', 'anonymous')
 
     const blogCommentEl = document.getElementById('blog-comment')
