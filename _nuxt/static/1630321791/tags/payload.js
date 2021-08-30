@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/tags", {data:[{tags:["stories","css","figma","ux\u002Fui"]}],fetch:{},mutations:void 0});
