@@ -60,7 +60,7 @@ export default class BlogItemPreiview extends Vue {}
 }
 
 .blog-item-preview__title {
-  height: 4.5rem;
+  height: 5.5rem;
 
   @include limitLine(2);
 }

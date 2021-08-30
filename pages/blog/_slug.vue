@@ -200,6 +200,16 @@ section.blog-detail__content {
       padding-left: inherit;
       padding-right: inherit;
     }
+
+    .token {
+      background-color: inherit;
+      font-size: inherit;
+      padding-left: inherit;
+      padding-right: inherit;
+      margin-left: inherit;
+      margin-right: inherit;
+      display: inherit;
+    }
   }
 }
 
