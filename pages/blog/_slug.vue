@@ -157,6 +157,10 @@ section.blog-detail__featured-img {
   @include responsive(MD) {
     margin: 3rem 0;
   }
+
+  > img {
+    width: 100%;
+  }
 }
 
 section.blog-detail__content {
