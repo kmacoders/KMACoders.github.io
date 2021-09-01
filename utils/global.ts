@@ -8,7 +8,7 @@ export default {
   siteName: 'Rio Dev',
   siteTitle: 'Rio Dev',
   siteType: 'website',
-  mainImage: 'icon.png',
+  mainImage: '/icon.png',
   author: 'rio',
   twitterHandle: '@kmacoders',
   twitterURL: 'https://twitter.com/kmacoders',

@@ -84,7 +84,7 @@ export default class BlogDetail extends Vue {
       title: this.blogDetail.title,
       description: this.blogDetail.description,
       url: `${this.$config.baseUrl}/blog/${this.$route.params.slug}`,
-      mainImage: this.blogDetail.image
+      mainImage: `${this.$config.baseUrl}/${this.blogDetail.image}`
     }
 
     return {
