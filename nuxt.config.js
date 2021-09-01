@@ -58,7 +58,7 @@ export default {
   ],
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://www.kmacoders.github.io',
+    hostname: 'https://kmacoders.github.io',
     routes () {
       return getRoutes()
     }
