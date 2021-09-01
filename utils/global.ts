@@ -5,14 +5,15 @@
 */
 export default {
   siteUrl: 'https://kmacoders.github.io',
-  siteName: 'rio',
+  siteName: 'Rio Dev',
+  siteTitle: 'Rio Dev',
+  siteType: 'website',
+  mainImage: 'icon.png',
   author: 'rio',
   twitterHandle: '@kmacoders',
   twitterURL: 'https://twitter.com/kmacoders',
   githubURL: 'https://github.com/kmacoders',
-  siteTitle: 'rio',
+  facebookURL: 'https://www.facebook.com/kmacoders',
   siteDesc:
-    'Stay hungry, stay foolish',
-  mainImage: '',
-  siteType: 'website'
+    'Welcome to Rio blog, where I talk about Frontend and UX/UI related topics'
 }
