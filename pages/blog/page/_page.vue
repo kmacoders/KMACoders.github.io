@@ -12,7 +12,7 @@
       <section class="blog-list mt-6">
         <h2 class="title is-2">
           <span class="has-underline is-level-5">
-           All
+            All
           </span>
         </h2>
         <ListBlog :list-blogs="paginatedArticles" />
@@ -27,11 +27,12 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import getContent from '@/utils/getContent'
-import FeaturedBlog from '@/components/organisms/FeaturedBlog'
+import FeaturedBlog from '@/components/organisms/FeaturedBlog.vue'
 import ListBlog from '@/components/organisms/ListBlog.vue'
+import { IContent } from '~/types/content/page'
 
 @Component({
   components: {
@@ -51,7 +52,17 @@ import ListBlog from '@/components/organisms/ListBlog.vue'
       perPage,
       currentPage
     }
-  },
+  }
+})
+export default class PageBlog extends Vue {
+  currentPage!: number
+
+  perPage!: number
+
+  allArticles!: IContent[]
+
+  paginatedArticles!: IContent[]
+
   head () {
     return {
       title: `Rio Blog - Page ${this.currentPage} of ${Math.ceil(this.allArticles.length / this.perPage)}`,
@@ -64,9 +75,6 @@ import ListBlog from '@/components/organisms/ListBlog.vue'
       ]
     }
   }
-
-})
-export default class PageBlog extends Vue {
 }
 </script>
 <style lang="scss" scoped>

@@ -23,7 +23,7 @@
                   My Blog
                 </button>
               </NuxtLink>
-              <NuxtLink :to="{ name: 'contact'}">
+              <NuxtLink :to="{ name: 'contact-us'}">
                 <button class="button">
                   Contact
                 </button>

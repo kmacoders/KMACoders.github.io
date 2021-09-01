@@ -1,7 +1,10 @@
-export default async ($content, currentPage, perPage, error, path) => {
+import { contentFunc } from '@nuxt/content/types/content'
+import { IContent } from '~/types/content/page'
+
+export default async ($content: contentFunc, currentPage: number, perPage: number, error: any, path: string) => {
   const allArticles = await $content(path, { deep: true })
     .sortBy('published', 'desc')
-    .fetch()
+    .fetch<IContent[]>()
   const totalArticles = allArticles.length
 
   /**
@@ -32,7 +35,7 @@ export default async ($content, currentPage, perPage, error, path) => {
     .sortBy('published', 'desc')
     .limit(perPage)
     .skip(skipNumber())
-    .fetch()
+    .fetch<IContent[]>()
 
   if (currentPage === 0 || !paginatedArticles.length) {
     return error({ statusCode: 404, message: 'No articles found!' })
