@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1630497431",layout:"default",error:a,serverRendered:true,routePath:"\u002Fblog\u002Fcustom-mot-switch-giong-tren-ios",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"d8b5276c"}}}}(null));
