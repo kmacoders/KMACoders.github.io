@@ -5,10 +5,11 @@
 */
 export default {
   siteUrl: 'https://kmacoders.github.io',
-  siteName: 'Rio Dev',
-  siteTitle: 'Rio Dev',
+  siteName: 'kmcoders',
+  siteTitle: 'kmacoders',
   siteType: 'website',
-  mainImage: '/icon.png',
+  mainImage: 'https://res.cloudinary.com/kmacoders/image/upload/v1630578605/kmacoders.github.io/static/mainImage.png',
+  favicon: 'https://res.cloudinary.com/kmacoders/image/upload/v1630577727/kmacoders.github.io/static/favicon.ico',
   author: 'rio',
   twitterHandle: '@kmacoders',
   twitterURL: 'https://twitter.com/kmacoders',
