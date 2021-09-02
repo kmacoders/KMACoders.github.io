@@ -2,7 +2,7 @@
 title: Ảo diệu hơn với map phím trong VIM
 description: 'Có lẽ điều khiến VIM trở nên cuốn hút nhât chính là khả năng lả lướt trên bàn phím của nó, khiến cho đôi tay của một developer không cần thiết phải rời ra khỏi keyboard. Từ đó luồng suy nghĩ cũng focus hơn bao giờ hết vì bây giờ bạn chỉ cần nghĩ, nghĩ và nghĩ mà thôi. Và tất nhiên để làm điều đó, chúng ta không thể bỏ qua Mapping trong VIM'
 author: 'Hưng'
-image: '/images/blog/2021/07/01-vim.png'
+image: 'https://res.cloudinary.com/kmacoders/image/upload/v1630578037/kmacoders.github.io/static/images/blog/2021/07/01-vim_vk118v.webp'
 tags: ['vim']
 published: '2020-07-01'
 ---

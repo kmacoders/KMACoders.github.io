@@ -2,7 +2,7 @@
 title: Bạn biết bao nhiêu cách để ẩn một element
 description: 'Nhắc đến việc show, hide một element trong Document chắc ai cũng sẽ nhớ ngay đến giá trị none của display trong CSS. Vậy thì có bao giờ bạn thắc mắc về những cách làm nào khác cho kết quả tương tự không ?'
 author: 'Hưng'
-image: '/images/blog/2020/06/2020-06-css.jpeg'
+image: 'https://res.cloudinary.com/kmacoders/image/upload/v1630577997/kmacoders.github.io/static/images/blog/2020/06/2020-06-css_ifuduy.jpg'
 tags: ['css']
 published: '2020-06-10'
 ---

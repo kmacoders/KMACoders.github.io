@@ -2,7 +2,7 @@
 title: Webpack, nhật kí bóc tách
 description: 'Một câu chuyện thú vị trong việc setup một config hoàn hảo cho project của team mình. Với các tình tiết ly kì, hấp dẫn kết hợp cùng văn phong của một con người đã từng thức đến 4h sáng chỉ vì Search google không ra lỗi cũng như nhận kha khá gạch đá của ae trong team nên ức quá không ngủ được'
 author: 'Hưng'
-image: '/images/blog/2021/08/30-webpack-banner.png'
+image: 'https://res.cloudinary.com/kmacoders/image/upload/v1630578053/kmacoders.github.io/static/images/blog/2021/08/30-webpack-banner_ufhb7w.png'
 tags: ['webpack']
 published: '2020-08-30'
 ---
@@ -11,7 +11,7 @@ published: '2020-08-30'
 Ngày mới học đến SCSS, công cụ đầu tiên mình dùng để bundle là Gulp. Một trong những điều mình thích nhất ở nó là config kiểu Pipeline, rất dễ đọc. Sau này thì để phục vụ cho công việc thì mình có dùng Webpack, Vite ( đối với các project build site ) và một chút Rollup ( đối với các lib ), hơn cả trong số này là Webpack. Và cũng giống như một số người config webpack từ đầu, mình cũng bị ngợp và thật sự là hơi rối. 
 Ví dụ như đây là một file config webpack hồi ấy của mình
 
-![Webpack](/images/blog/2021/08/30-webpack-1.png)
+![Webpack](https://res.cloudinary.com/kmacoders/image/upload/v1630578053/kmacoders.github.io/static/images/blog/2021/08/30-webpack-1_hjhbzl.png)
 
 
 All in one trong một file cho nó nhanh. Nếu có config nào cần sự khác nhau giữa môi trường development và production thì mình sẽ dùng env để check như chỗ devtool kia. Mọi thứ ok, project mượt mà, fix phiếc dễ dàng, căn bản project cũng nhỏ, chẳng có gì lắm, quanh quẩn 5, 60 lines là xong rồi. 
@@ -26,7 +26,7 @@ Vì sao lại có chuyện chia làm config khác nhau. Vì đơn giản chúng 
 Một ví dụ đơn giản, code ở development thì không cần optimize gì, devtool source map thì cứ bật lên cho dễ check lỗi... Nhưng ở production, code của project cần được optimize hết sức có thể, để tăng khả năng load trang cho user, lúc ấy thì source map tất nhiên cũng chẳng có ý nghĩa gì.
 Thế là sau khi ngộ ra vấn đề, cũng như tham khảo các tiền bối Tây lông, thì mình chia ra được cấu trúc như thế này
 
-![Webpack](/images/blog/2021/08/30-webpack-2.png)
+![Webpack](https://res.cloudinary.com/kmacoders/image/upload/v1630578054/kmacoders.github.io/static/images/blog/2021/08/30-webpack-2_r8hdag.png)
 
 
 `Project structure`
@@ -85,7 +85,7 @@ module.exports = getConfig(mode);
 Các bạn nhìn thấy lúc này file config của mình đã rất ngắn, do mình chia làm 3 file config nhỏ ra. Cụ thể là webpack.common ( là những config có trên cả 2 môi trường ) , webpack.dev ( cho môi trường development) và webpack.prod ( cho môi trường production ), chưa kể các addons ( không có trong config, chỉ xuất hiện khi cần. Ví dụ như  Bundle Analyzer... )
 Đi kèm với config này, mình sẽ có các câu script như sau :
 
-![Webpack](/images/blog/2021/08/30-webpack-3.png)
+![Webpack](https://res.cloudinary.com/kmacoders/image/upload/v1630578054/kmacoders.github.io/static/images/blog/2021/08/30-webpack-3_qj2xb6.png)
 
 
 Thì việc chia như này giúp mình một số việc :
@@ -95,7 +95,7 @@ Thì việc chia như này giúp mình một số việc :
  - Việc merge lúc này đã có webpack-merge giúp mình. Tuỳ vào môi trường là dev hay prod, nó sẽ merge file common + file config của môi trường đấy.
  - Các addon ( một số plugin hỗ trợ ) lúc này có thể chỉ được thêm vào khi cần thiết. Như ảnh trên thì bạn thấy mình có dùng addons là bundleanalyzer. Thì đây là một plugin của webpack giúp mình hình dung ra được sự tương quan về các file size sau khi bundle. Và tất nhiên mình chẳng cần nó ở cả dev và prod, nếu đặt ở common thì lần nào build nó cũng chạy quá tốn thời gian. Thế nên mình để vào addon, dựa trên config kia, chỉ khi nào mình chạy lệnh npm run build:prod:bundleanalyzer thì plugin này mới được thêm vào config. Kết quả trông như thế này 
   
-![Webpack](/images/blog/2021/08/30-webpack-4.png)
+![Webpack](https://res.cloudinary.com/kmacoders/image/upload/v1630578054/kmacoders.github.io/static/images/blog/2021/08/30-webpack-4_xkbekt.png)
 
 
 Nhìn là thấy quả thư viện swiper kia nặng vch.
@@ -106,7 +106,7 @@ Thì quay lại câu chuyện, dù đã chia như kia rồi, nhưng như mình n
 Lại một lần nữa cái khó ló cái khôn, với sự chỉ giáo của các tiền bối Tây lông, mình đã cho ra đời chiếc config custom nhỏ hơn nữa, và đặc biệt rất dễ hiểu, dễ sửa với các bạn không biết webpack như team mình.
 Trước tiên, khoe nhẹ cái structure đã
 
-![Webpack](/images/blog/2021/08/30-webpack-5.png)
+![Webpack](https://res.cloudinary.com/kmacoders/image/upload/v1630578053/kmacoders.github.io/static/images/blog/2021/08/30-webpack-5_jhdzlf.png)
 
 `New structure`
 

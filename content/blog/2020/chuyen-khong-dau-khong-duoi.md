@@ -2,7 +2,7 @@
 title: Chuyện không đầu không đuôi
 description: 'Chuyện không đầu không đuôi là một chuyện không có đầu cũng không có đuôi nên được gọi là chuyện không đầu không đuôi.'
 author: 'Hưng'
-image: '/images/blog/2020/06/2020-06-note.jpeg'
+image: 'https://res.cloudinary.com/kmacoders/image/upload/v1630577997/kmacoders.github.io/static/images/blog/2020/06/2020-06-note_aixoxt.jpg'
 tags: ['stories']
 published: '2020-06-08'
 ---

@@ -2,7 +2,7 @@
 title: Custom một Switch giống trên iOS
 description: 'Đợt đầu tuần xem update iOS 14, mình nhìn thấy thanh switch trên iOS. Đối với những lựa chọn mang tính Yes/No thì Apple rất hay sử dụng thanh switch này, đến nỗi nhìn nó là biết ngay là HĐH nào rồi.'
 author: 'Hưng'
-image: '/images/blog/2020/07/2020-07-ios.jpeg'
+image: 'https://res.cloudinary.com/kmacoders/image/upload/v1630578012/kmacoders.github.io/static/images/blog/2020/07/2020-07-ios_noxjg8.jpg'
 tags: ['css']
 published: '2020-07-12'
 ---
@@ -13,7 +13,7 @@ Lại một tuần trôi qua, thực ra thì nó vẫn sẽ trôi qua bất kể
 Đợt đầu tuần xem update iOS 14, mình nhìn thấy thanh switch trên iOS. Đối với những lựa chọn mang tính Yes/No thì Apple rất hay sử dụng thanh switch này, đến nỗi nhìn nó là biết ngay là HĐH nào rồi. Thế là mình chợt nghĩ lại hồi mới bắt đầu học CSS, mình cũng từng muốn làm một cái như thế bằng CSS, mà mãi không hiểu sao họ làm được, làm đẹp. Cho đến khi làm được, thì mình lại bị cuốn vào một lô một lốc những sự việc xảy ra, rồi bao thứ phải học khác, mà quên mất rằng “Umm, biết đâu cũng có một số người như mình hồi xưa, thắc mắc nguyên lý nào để custom ra một switch như vậy, rồi viết CSS như nào”.
 Thế nên mình viết notes này, nhẽ là định hôm qua mà đêm qua ngồi làm nốt task trên công ty đến 1h sáng mới xong, nên mình để sang hôm nay. Thì với iFans thì khỏi nói rồi, ai dùng Android thì thanh ấy trông như thế này đây.
 
-![ios image](/images/blog/2020/07/2020-07-ios-1.png)
+![ios image](https://res.cloudinary.com/kmacoders/image/upload/v1630578011/kmacoders.github.io/static/images/blog/2020/07/2020-07-ios-1_jh4uaz.png)
 
 Okay, và mục tiêu của mình, vừa là CSS, vừa là nguyên lý để tạo nên những custom kiểu này, mình tin là từ những custom basic đến advanced hơn thì nguyên lý không đổi. Nên nếu áp dụng tốt, ta hoàn toàn có thể tạo ra những thứ đẹp hơn, phức tạp hơn rất nhiều.
 
@@ -45,7 +45,7 @@ Lạ lùng đúng không, custom thẻ input lại ẩn đi thẻ input. Ngày x
 
 Xong, thẻ input biến mất. Nhưng mà hãy nhớ là nó chỉ là không nhìn thấy thôi nhé, chứ chưa phải là xóa khỏi DOM đâu. Ta sẽ cần đến thằng input này, để hợp với <label> điều khiển quả bóng được tao ra từ <div class="slider"></div>. Minh họa này cho dễ hiểu :
 
-![ios image](/images/blog/2020/07/2020-07-ios-2.png)
+![ios image](https://res.cloudinary.com/kmacoders/image/upload/v1630578011/kmacoders.github.io/static/images/blog/2020/07/2020-07-ios-2_ag6p29.png)
 
 Lúc này, ta muốn <label> thành cái khung bao bên ngoài, và <div class="slider"> thành rãnh nền màu xanh ( trắng ) bao lấy quả bóng.
 
@@ -63,7 +63,7 @@ Thằng div này vai trò khá khủng. Nó sẽ là cái rãnh cho quả bóng 
 ```
 Rồi, nó dài 100px, rộng ( cao ) 60px. Trông nó như thế này :
 
-![ios image](/images/blog/2020/07/2020-07-ios-4.png)
+![ios image](https://res.cloudinary.com/kmacoders/image/upload/v1630578012/kmacoders.github.io/static/images/blog/2020/07/2020-07-ios-4_zfqjzv.png)
 
 Các thuộc tính CSS kia không có gì để bàn ngoại trừ position, tại sao lại có nó, ta sẽ nói ở ngay bên dưới đây.
 
@@ -85,14 +85,14 @@ Tiếp đến, ta tạo nốt quả bóng. Lúc này ta cần sử dụng một 
 
 Tại sao lại có các đơn vị đo thế kia, tại sao lại có top, left rồi positon, mình sẽ giải thích ngay.
 
-![ios image](/images/blog/2020/07/2020-07-ios-3.png)
+![ios image](https://res.cloudinary.com/kmacoders/image/upload/v1630578012/kmacoders.github.io/static/images/blog/2020/07/2020-07-ios-3_sfh9k6.png)
 
 Gọi x và y là chiều dài và chiều rộng của thanh Switch, chính là thằng .slider bên trên.
 Gọi d là đường kính của quả bóng ( tức là .slider::before ). Quả bóng này có đường kính là 50px, nên ta cho width = height = 50px. Tuy nhiên lúc này nó là hình vuông, nên ta thêm thuộc tính border-radius để bo tròn nó lại cho thành quả bóng.
 Có quả bóng rồi, ta bắt đầu tính toán vị trí ban đầu của nó. Cái Switch cao 60px ( y ), bóng có đường kính 50px, như vậy nó cần cách trên và dưới 5px, nên ta set top = 5px ( suy ra bottom = 50-50-5 = 5px luôn ). Để cho đẹp, ta cho quả bóng cách lề trái 5px luôn, như vậy có left = 5px. Ở đây, ta muốn căn quả bóng theo phụ thuộc thằng cha của nó là cái rãnh bao Switch, tức là thằng .slider nên ta cần đặt thằng con là position là absolute, còn thằng cha là relative ( Đây là lời giải cho dòng CSS position relative bên trên, bạn không thể định ví trí cho 1 child absolute nếu như parent của nó không phải là relative, absolute… chắc cái này các bạn đã biết khi học position ).
 Xong, kết quả trông như này :
 
-![ios image](/images/blog/2020/07/2020-07-ios-4.png)
+![ios image](https://res.cloudinary.com/kmacoders/image/upload/v1630578012/kmacoders.github.io/static/images/blog/2020/07/2020-07-ios-4_zfqjzv.png)
 
 Bước 3, xử lý việc chạy đi chạy lại của bóng
 Và đây là bước cuối. Hiểu được nó là coi như bạn đã hiểu nguyên lý của việc ta làm từ nãy đến giờ.
@@ -118,7 +118,7 @@ input[type="checkbox"]:checked + .slider {
 }
 ```
 
-![ios image](/images/blog/2020/07/2020-07-ios-5.png)
+![ios image](https://res.cloudinary.com/kmacoders/image/upload/v1630578012/kmacoders.github.io/static/images/blog/2020/07/2020-07-ios-5_dqwsc9.png)
 
 Lúc này ta lại quay lại hình vẽ bên trên. Ban đầu quả bóng ở vị trí cách lề trái 5px, thì khi nó lăn sang lề phải, nó vẫn phải cách 5px. Như vậy làm 1 phép toán, ta có đoạn đường quả bóng dịch chuyển bằng 100px - 50px - 5px - 5px = 40px. Hãy quay lại hình tính toán để biết các con số này là sao nhé. 2 bên cách 5px, quả bóng dài 50px, khung dài 100px, thì phần còn lại chính là phần quả bóng được phép lăn thôi. Để phục vụ việc này ta sử dụng thuộc tính transform: translateX(40px). Trong đó transform nó có rất nhiều giá trị hay như scale, skew... các kiểu con đà điểu, ở đây dùng translateX(40px), tức là dịch theo trục X ( chiều ngang ) 1 đoạn 40px.
 

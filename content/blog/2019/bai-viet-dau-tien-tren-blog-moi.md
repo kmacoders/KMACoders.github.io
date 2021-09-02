@@ -2,7 +2,7 @@
 title: Bài viết đầu tiên trên Blog mới
 description: 'Bài viết này thực ra được viết từ 10/08/2019. Đây cũng là bài viết đầu tiên tại blog kmacoders.github.io ngày ấy, thời điểm mà mình biết những dòng mà mình đang gõ ra đã có những người đầu tiên đọc.'
 author: 'Hưng'
-image: '/images/blog/2019/2019-kmacoders-1.jpeg'
+image: 'https://res.cloudinary.com/kmacoders/image/upload/v1630577905/kmacoders.github.io/static/images/blog/2019/2019-kmacoders-1_ywoior.jpg'
 tags: ['stories']
 published: '2019-08-10'
 ---
@@ -10,7 +10,7 @@ published: '2019-08-10'
 ## Mở bài
 Mình đã từng có một blog, và duy trì nó suốt cả năm nay, viết từ khi mình bắt đầu kiếm được công việc đầu tiên về lập trình, đâu đó khoảng cuối tháng 11 năm 2018. Mình vẫn duy trì nó đến bây giờ mặc dù số lượng bài viết không nhiều, chỉ từ một đến hai bài một tháng. Mình cũng muốn viết nhiều lắm, cũng lập ra nhiều series này kia, nhưng thường viết dang dở vì nhiều lý do khác nhau. Cho đến thời điểm hiện tại, cũng vì một vài lý do khác, mình quyết định sẽ chăm chút hơn cho blog này.
 
-![enter image description here](/images/blog/2019/2019-kmacoders-2.jpeg)
+![enter image description here](https://res.cloudinary.com/kmacoders/image/upload/v1630577903/kmacoders.github.io/static/images/blog/2019/2019-kmacoders-2_as0jvx.jpg)
 
 ## Thân bài
 Và lý do đó là kmacoders - có thể coi như là một đứa con tinh thần ở thời điểm hiện tại. Trước đây, mình bắt đầu với một blog cá nhân vì hai lý do chính.
@@ -21,7 +21,7 @@ Thứ hai, mình viết blog vì sự đặc thù của nghề lập trình. L�
 
 Và ở thời điểm lập ra blog này, mình có thể vui vẻ nói rằng kmacoders là một lý do nữa để mình dành thêm thời gian ở trên đây. Mình sẽ cố gắng xây dựng nó, ít nhất là tốt ngày nào hay ngày đó, để có nhiều hơn những người tìm thấy được đam mê của mình.
 
-![enter image description here](/images/blog/2019/2019-kmacoders-3.jpeg)
+![enter image description here](https://res.cloudinary.com/kmacoders/image/upload/v1630577903/kmacoders.github.io/static/images/blog/2019/2019-kmacoders-3_fert9d.jpg)
 
 ## Kết bài
 Vậy nên có thể mình sẽ up mấy bài cũ ở blog trước lên đây luôn. Sắp tới, mình sẽ đầu tư viết một series hoàn chỉnh ở trên này. Ít nhất là cho các bạn ở kmacoders, có thể là series về Java đầu tiên.
