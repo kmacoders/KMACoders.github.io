@@ -1,10 +1,13 @@
 <template>
-  <div class="blog-image-wrapper">
+  <NuxtLink
+    :to="{ name: 'blog-slug', params: { slug: slug }}"
+    class="blog-image-wrapper"
+  >
     <div
       class="blog-image"
       :style="{ backgroundImage: 'url(' + imageUrl + ')' }"
     />
-  </div>
+  </NuxtLink>
 </template>
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator'
@@ -13,6 +16,9 @@ import { Vue, Component, Prop } from 'nuxt-property-decorator'
 export default class BlogItemImage extends Vue {
   @Prop({ type: String, required: true })
   imageUrl!: string
+
+  @Prop({ type: String, required: true })
+  slug!: string
 }
 </script>
 

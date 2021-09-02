@@ -9,6 +9,7 @@
         <div class="column is-12">
           <BlogItemImage
             :image-url="blog.image"
+            :slug="blog.slug"
           />
         </div>
         <div class="column is-12">

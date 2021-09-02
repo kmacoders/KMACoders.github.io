@@ -5,6 +5,7 @@
         <div class="column is-7">
           <BlogItemImage
             :image-url="firstBlog.image"
+            :slug="firstBlog.slug"
           />
         </div>
         <div class="column is-5">
