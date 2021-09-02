@@ -17,4 +17,9 @@ export interface IContent extends IContentDocument {
   tags: string[];
   published: string;
   author: string;
+  /**
+   *  body content of a Markdown file before it is transformed into AST JSON,
+   *  you can use it at this point but it is not returned by the API.
+   */
+  contentBeforeJson: string;
 }

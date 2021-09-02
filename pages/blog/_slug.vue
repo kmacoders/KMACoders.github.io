@@ -4,8 +4,14 @@
       <section class="blog-detail__intro">
         <div class="blog-detail__createby">
           <span class="blog-detail__author">{{ blogDetail.author }}</span>
-          &nbsp;on&nbsp;
-          <span class="blog-detail__published">{{ blogDetail.published }}</span>
+          &nbsp; on &nbsp;
+          <span class="blog-detail__published">
+            <LocaleDateString :date="blogDetail.published"/>
+          </span>
+          &nbsp; &middot; &nbsp;
+          <span class="blog-detail__readingtime">
+            <ReadingTime :content="blogDetail.contentBeforeJson" />
+          </span>
         </div>
         <h1 class="blog-detail__title title is-2">
           {{ blogDetail.title }}

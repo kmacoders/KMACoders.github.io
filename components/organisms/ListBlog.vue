@@ -13,10 +13,7 @@
         </div>
         <div class="column is-12">
           <BlogItemView
-            :tags="blog.tags"
-            :title="blog.title"
-            :description="blog.description"
-            :slug="blog.slug"
+            :blog-detail="blog"
           />
         </div>
       </article>

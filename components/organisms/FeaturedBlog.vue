@@ -9,10 +9,7 @@
         </div>
         <div class="column is-5">
           <BlogItemPreview
-            :tags="firstBlog.tags"
-            :title="firstBlog.title"
-            :description="firstBlog.description"
-            :slug="firstBlog.slug"
+            :blog-detail="firstBlog"
           />
         </div>
       </article>
@@ -36,6 +33,10 @@ import { IContent } from '~/types/content/page'
 export default class FeaturedBlog extends Vue {
   @Prop({ type: Object as PropType<IContent>, required: true })
   firstBlog!: IContent
+
+  mounted () {
+    console.log(this.firstBlog)
+  }
 }
 </script>
 <style lang="scss">

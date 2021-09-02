@@ -27,7 +27,7 @@ import ListBlog from '@/components/organisms/ListBlog.vue'
      */
     const path = 'blog'
     const blog = await $content(path, { deep: true })
-      .only(['title', 'description', 'image', 'slug', 'published', 'tags'])
+      .only(['title', 'description', 'image', 'slug', 'published', 'tags', 'contentBeforeJson'])
       .sortBy('published', 'desc')
       .fetch()
 

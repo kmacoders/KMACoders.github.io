@@ -91,5 +91,17 @@ export default {
   },
   publicRuntimeConfig: {
     baseUrl: global.siteUrl
+  },
+
+  /**
+   *  body content of a Markdown file before it is transformed into AST JSON,
+   *  you can use it at this point but it is not returned by the API.
+   */
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        document.contentBeforeJson = document.text
+      }
+    }
   }
 }

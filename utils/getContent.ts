@@ -3,6 +3,7 @@ import { IContent } from '~/types/content/page'
 
 export default async ($content: contentFunc, currentPage: number, perPage: number, error: any, path: string) => {
   const allArticles = await $content(path, { deep: true })
+    .only(['title', 'description', 'image', 'slug', 'tags', 'published', 'contentBeforeJson'])
     .sortBy('published', 'desc')
     .fetch<IContent[]>()
   const totalArticles = allArticles.length
@@ -31,7 +32,7 @@ export default async ($content: contentFunc, currentPage: number, perPage: numbe
    * get items skip
    */
   const paginatedArticles = await $content(path, { deep: true })
-    .only(['title', 'description', 'image', 'slug', 'tags', 'published'])
+    .only(['title', 'description', 'image', 'slug', 'tags', 'published', 'contentBeforeJson'])
     .sortBy('published', 'desc')
     .limit(perPage)
     .skip(skipNumber())
