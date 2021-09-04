@@ -47,9 +47,9 @@
       </b-navbar-item>
       <b-navbar-item tag="div">
         <div class="buttons">
-          <NuxtLink to="/sign-in" class="button is-primary">
+          <a href="https://www.linkedin.com/in/kmacoders/" class="button is-primary">
             Hire me
-          </NuxtLink>
+          </a>
         </div>
       </b-navbar-item>
     </template>
@@ -64,11 +64,6 @@ export default class TheHeader extends Vue {
   navbarItems = [
     {
       title: 'Home',
-      link: '/',
-      subMenu: []
-    },
-    {
-      title: 'Infomation',
       link: '/',
       subMenu: []
     },
