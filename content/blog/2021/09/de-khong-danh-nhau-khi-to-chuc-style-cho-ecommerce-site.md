@@ -1,5 +1,5 @@
 ---
-title: Để không đánh nhau khi tổ chức style cho eCommerce site
+title: Để không đánh nhau khi tổ chức style cho ecommerce site
 description: 'Bài viết này dựa trên một truyền thuyết có thật... à nhầm một câu chuyện thực tế về cách mình và team đã cùng nhau giải quyết các vấn đề style khi làm một page eCommerce với khoảng 40+ screens ( desktop + mobile ). Bằng một cách thần kì nào đó không có cuộc đánh nhau nào xảy ra trong suốt quá trình code. Giờ thì bắt đầu thôi.'
 author: 'Hưng'
 image: 'https://res.cloudinary.com/kmacoders/image/upload/v1630769848/kmacoders.github.io/static/images/blog/2021/09/04-banner_oxfx2z.png'
@@ -27,10 +27,10 @@ Việc đầu tiên đau đầu là mình phân vân giữa việc để team co
  Ngồi kể cả đống kia ra, ấy thế mà, cuối cùng sau tất cả, mình và team vẫn chọn code SCSS, tại sao vậy ?
  Vì chúng mình làm thử. Rất nhanh sau đó, mình đã nhận ra một số điểm mà có lẽ team mình chưa nên dùng Atomic CSS ở thời điểm này. Sau rất nhiều đêm mất ngủ, mình đành setup lại, cấu trúc lại, tạm biệt cô em Tailwind sexy này 
 
-- Tất nhiên lý do đầu là các bố các phải học, từng ông trong team phải mò vào docs của Tailwind và bắt đầu đọc thần chú với hàng nghìn class có sẵn của nó. Với mình thì nó hệ thống, dễ nhớ. Tuy nhiên, không phải là một lựa chọn bắt đầu project nhanh. 
- - Loạn xì ngậu class, chiến trường class, nghĩa địa atomic... Âu, đúng vậy. Giời ơi nó lắm class vô cùng luôn. Khác với khi làm Admin Dashboard hay những thứ tương tự thế, thì thực sự các web, đặc biệt là e-commerce thì đúng là ối dồi ôi. Design của nó rất phức tạp, nhiều chi tiết nhỏ lỉnh kỉnh. Chưa kể yêu cầu Pixel Perfect đến từ sếp. Một cái div nhỏ khi ấy kéo dài lê thê là chuyện thường. Mà Liquid lại còn là một kiểu viết logic luôn trong HTML. Thật không tin nổi, mình đang đặt cả template, logic và style vào cùng một chỗ.
+- Tất nhiên lý do đầu là các bố phải học, từng ông trong team phải mò vào docs của Tailwind và bắt đầu đọc thần chú với hàng nghìn class có sẵn của nó. Với mình thì nó hệ thống, dễ nhớ. Tuy nhiên, không phải là một lựa chọn bắt đầu project nhanh. 
+ - Loạn xì ngậu class, chiến trường class, nghĩa địa atomic... Âu, đúng vậy. Giời ơi nó lắm class vô cùng luôn. Khác với khi làm Admin Dashboard hay những thứ tương tự thế, thì thực sự các web, đặc biệt là ecommerce thì đúng là ối dồi ôi. Design của nó rất phức tạp, nhiều chi tiết nhỏ lỉnh kỉnh. Chưa kể yêu cầu Pixel Perfect đến từ sếp. Một cái div nhỏ khi ấy kéo dài lê thê là chuyện thường. Mà Liquid lại còn là một kiểu viết logic luôn trong HTML. Thật không tin nổi, mình đang đặt cả template, logic và style vào cùng một chỗ.
  - Một page ecommerce thì có rất nhiều element, nhiều component nhỏ. Như vậy khi atomic class tràn đầy trên template, việc thay đổi style của 1 element sẽ rất khó. Bạn sẽ phải tìm và thay một đống ( tương tự nếu có ) trên template đó. 
-- Vẫn phải custom khá nhiều. Một số trường hợp design phức tạp bản thân Tailwind vẫn chưa thể cover với đống class atomic của nó được, mình đành vẫn tạo file scss rồi custom class vào đó.
+- Vẫn phải custom khá nhiều. Một số trường hợp design phức tạp bản thân Tailwind vẫn chưa thể cover với đống class atomic của nó được, mình đành vẫn tạo file scss rồi custom class vào.
 
 Đứng trước các vấn đề đó, sau một lần nữa lại những đêm mất ngủ, mình đành quyết định dùng SCSS. Nhưng câu hỏi đặt ra là mình sẽ dùng như thế nào để phù hợp với project đây.
 
