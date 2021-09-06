@@ -29,7 +29,7 @@
               About Me
             </h3>
             <p>
-              For more than 1 year working with Shopify Theme,
+              For more than 2 years working with Shopify Theme,
               in addition to customizing themes according to clients' requirements, I have experience as the leader of a team of about 5 other shopify developers.
             </p>
           </div>
