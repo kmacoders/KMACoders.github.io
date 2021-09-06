@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/tags", {data:[{tags:["css","stories","vim","figma","ux\u002Fui","webpack","scss","shopify"]}],fetch:{},mutations:void 0});
