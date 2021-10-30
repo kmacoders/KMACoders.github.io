@@ -182,7 +182,7 @@ svg {
   @include gridPosition(7, 13, 6, 4, $figma-color);
 
   @include responsive(MD) {
-    @include gridPosition(9, 9, 5, 4, $figma-color);
+    @include gridPosition(9, 9, 4, 4, $figma-color);
   }
 }
 </style>

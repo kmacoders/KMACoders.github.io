@@ -10,14 +10,14 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 import AOS from 'aos'
 import Banner from '@/components/templates/home/Banner.vue'
-import Skills from '@/components/templates/home/Skills.vue'
 import Profile from '@/components/templates/home/Profile.vue'
+import Skills from '@/components/templates/home/Skills.vue'
 
 @Component({
   components: {
     Banner,
-    Skills,
-    Profile
+    Profile,
+    Skills
   }
 })
 export default class Index extends Vue {

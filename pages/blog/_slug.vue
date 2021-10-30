@@ -6,7 +6,7 @@
           <span class="blog-detail__author">{{ blogDetail.author }}</span>
           &nbsp; on &nbsp;
           <span class="blog-detail__published">
-            <LocaleDateString :date="blogDetail.published"/>
+            <LocaleDateString :date="blogDetail.published" />
           </span>
           &nbsp; &middot; &nbsp;
           <span class="blog-detail__readingtime">

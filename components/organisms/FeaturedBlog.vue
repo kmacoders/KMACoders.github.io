@@ -34,10 +34,6 @@ import { IContent } from '~/types/content/page'
 export default class FeaturedBlog extends Vue {
   @Prop({ type: Object as PropType<IContent>, required: true })
   firstBlog!: IContent
-
-  mounted () {
-    console.log(this.firstBlog)
-  }
 }
 </script>
 <style lang="scss">
