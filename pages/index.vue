@@ -3,6 +3,7 @@
     <Banner />
     <Profile />
     <Skills />
+    <Timeline />
   </div>
 </template>
 
@@ -12,12 +13,14 @@ import AOS from 'aos'
 import Banner from '@/components/templates/home/Banner.vue'
 import Profile from '@/components/templates/home/Profile.vue'
 import Skills from '@/components/templates/home/Skills.vue'
+import Timeline from '@/components/templates/home/Timeline.vue'
 
 @Component({
   components: {
     Banner,
     Profile,
-    Skills
+    Skills,
+    Timeline
   }
 })
 export default class Index extends Vue {

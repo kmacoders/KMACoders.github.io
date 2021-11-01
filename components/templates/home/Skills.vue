@@ -119,7 +119,7 @@ export default class Skills extends Vue {
   gap: 2px;
 
   @include responsive(MD) {
-    grid-template-rows: repeat(20, 3rem);
+    grid-template-rows: repeat(10, 3rem);
     gap: 10px;
   }
 }
