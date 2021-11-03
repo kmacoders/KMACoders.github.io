@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1635953037",layout:"default",error:a,serverRendered:true,routePath:"\u002Ftags\u002Fstories",config:{baseUrl:"https:\u002F\u002Fkmacoders.github.io",_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"393e8140"}}}}(null));
