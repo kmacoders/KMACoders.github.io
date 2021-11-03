@@ -2,8 +2,9 @@
   <div>
     <Banner />
     <Profile />
-    <Skills />
+    <Service />
     <Timeline />
+    <Skills />
   </div>
 </template>
 
@@ -14,13 +15,15 @@ import Banner from '@/components/templates/home/Banner.vue'
 import Profile from '@/components/templates/home/Profile.vue'
 import Skills from '@/components/templates/home/Skills.vue'
 import Timeline from '@/components/templates/home/Timeline.vue'
+import Service from '@/components/templates/home/Service.vue'
 
 @Component({
   components: {
     Banner,
     Profile,
     Skills,
-    Timeline
+    Timeline,
+    Service
   }
 })
 export default class Index extends Vue {

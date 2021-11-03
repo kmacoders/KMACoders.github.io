@@ -29,8 +29,8 @@
               About Me
             </h3>
             <p>
-              For more than 2 years working with Shopify Theme,
-              in addition to customizing themes according to clients' requirements, I have experience as the leader of a team of about 5 other shopify developers.
+              Are you looking for a Shopify expert and Shopify developer for some custom coding, fix Shopify custom code, and Shopify customization? Then don't worry because you are in the right place.<br>
+              I have great experience with Shopify custom coding, and I have worked on 30+ Shopify stores and have great experience in Shopify, fix Shopify bugs, theme customization, Shopify liquid coding, Shopify theme design, Shopify plugins integration.
             </p>
           </div>
           <div class="profile-info">
@@ -44,7 +44,7 @@
                 </span>
               </div>
               <div class="profile-info__detail">
-                Phùng Thái Hưng
+                Rio Phung
               </div>
             </div>
             <div class="profile-info__item">
@@ -77,7 +77,7 @@
           <div class="profile-signature">
             <img src="~assets/images/home/signature.png">
             <div>
-              Phùng Thái Hưng
+              Rio Phung
             </div>
           </div>
         </div>

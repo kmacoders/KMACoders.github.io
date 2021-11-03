@@ -3,7 +3,7 @@
     <div class="timeline__heading container">
       <h2 class="title is-2" data-aos="fade-up">
         <span class="has-underline is-level-5">
-          How i work
+          How
         </span>
       </h2>
       <div

@@ -80,13 +80,7 @@ export default class TheHeader extends Vue {
           link: '/tags'
         }
       ]
-    },
-    {
-      title: 'Contact',
-      link: '/contact-us',
-      subMenu: []
     }
-
   ]
 }
 </script>
