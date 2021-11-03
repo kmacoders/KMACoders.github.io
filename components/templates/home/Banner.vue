@@ -23,11 +23,7 @@
                   My Blog
                 </button>
               </NuxtLink>
-              <NuxtLink :to="{ name: 'contact-us'}">
-                <button class="button">
-                  Contact
-                </button>
-              </NuxtLink>
+              <a href="mailto:hungphung.act@gmail.com" class="button">Contact</a>
             </div>
           </div>
           <div
