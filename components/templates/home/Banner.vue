@@ -23,7 +23,7 @@
                   My Blog
                 </button>
               </NuxtLink>
-              <a href="mailto:hungphung.act@gmail.com" class="button">Contact</a>
+              <a href="mailto:contact.riophung@gmail.com" class="button">Contact</a>
             </div>
           </div>
           <div
