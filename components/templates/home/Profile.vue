@@ -70,7 +70,7 @@
                 </span>
               </div>
               <div class="profile-info__detail">
-                hungphung.act@gmail.com
+                contact.riophung@gmail.com
               </div>
             </div>
           </div>
